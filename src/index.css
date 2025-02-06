@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+@config "../tailwind.config.js";
 :root {
   font-family: "Urbanist", sans-serif;
   line-height: 1.5;
@@ -14,6 +15,4 @@
 * {
   box-sizing: border-box;
 }
-body {
-  margin: 0;
-}
+
