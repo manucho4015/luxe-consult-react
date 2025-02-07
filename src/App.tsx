@@ -5,6 +5,7 @@ import WorkWithUs from "./sections/WorkWithUs"
 import Companies from "./sections/Companies"
 import Categories from "./sections/Categories"
 import Properties from "./sections/properties/Index"
+import Ongoing from './sections/ongoing/Index'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Companies />
       <Categories />
       <Properties />
+      <Ongoing />
     </>
   )
 }
