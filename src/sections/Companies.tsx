@@ -2,7 +2,7 @@
 
 const Companies = () => {
     return (
-        <div className=" inline-flex w-full justify-center ">
+        <div className=" inline-flex w-full justify-center">
             <div className="max-h-[314.3px] h-[40vh] w-[90vw] rounded-xl bg-black shadow flex justify-center items-center">
                 <div className="text-white">
                     <p className="font-medium text-center">Thousands of world’s leading companies trust Space</p>

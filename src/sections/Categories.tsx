@@ -6,7 +6,7 @@ const Categories = () => {
     return (
         <div className='min-h-[50vh] inline-block w-full'>
             <h2 className="font-bold text-[40px] mt-[100px] text-center">Featured Categories</h2>
-            <p className="font-semibold text-[17px] text-center">Lorem ipsum dolor sit amet</p>
+            <p className="text-[17px] text-center">Lorem ipsum dolor sit amet</p>
             <div className="flex flex-wrap justify-between px-[10vw] mt-[25px]">
                 {
                     categories.map((category, index) => (

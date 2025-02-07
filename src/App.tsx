@@ -4,6 +4,7 @@ import Banner from "./sections/Banner"
 import WorkWithUs from "./sections/WorkWithUs"
 import Companies from "./sections/Companies"
 import Categories from "./sections/Categories"
+import Properties from "./sections/properties/Index"
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <WorkWithUs />
       <Companies />
       <Categories />
+      <Properties />
     </>
   )
 }
