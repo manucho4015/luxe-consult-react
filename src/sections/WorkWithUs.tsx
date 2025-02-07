@@ -38,7 +38,35 @@ const WorkWithUs = () => {
 
                 </div>
                 <div className="max-w-[45vw] w-[647px] max-h-[552px] h-[75vh] flex items-center relative">
-                    <div className="bg-[url(/city-skyline-sketch.jpg)] h-[80%] w-full"></div>
+                    <div className="bg-[url(/city-skyline-sketch.jpg)] h-[80%] w-full" />
+
+                    {/* trusted by thousands */}
+                    <div className="max-w-[322px] max-h-[155.2px] w-[30vw] h-[10vh] absolute right-0 top-[7.5vh]">
+                        <div className="flex justify-center">
+                            <img src="/shield-check.svg" alt="shield check" className="max-w-[51.04px] max-h-[53.2px] h-[5vh] w-[10vh]" />
+                        </div>
+                        <h3 className="font-medium text-[21px] text-center mt-[7.5px]">Trusted by Thousands</h3>
+                        <p className="text-[15px] font-light text-center">We offer Free consultancy to all our clients free of  charge.</p>
+                    </div>
+
+                    {/* Wide Range of Properties */}
+                    <div className="max-w-[322px] max-h-[155.2px] w-[30vw] h-[10vh] absolute left-0 top-[40%]">
+                        <div className="flex justify-center">
+                            <img src="/document-house.svg" alt="shield check" className="max-w-[51.04px] max-h-[53.2px] h-[5vh] w-[10vh]" />
+                        </div>
+                        <h3 className="font-medium text-[21px] text-center mt-[7.5px]">Wide Range of Properties</h3>
+                        <p className="text-[15px] font-light text-center">We offer expert legal help for all related property
+                            items in Kenya.</p>
+                    </div>
+
+                    {/* buy & sell houses */}
+                    <div className="max-w-[322px] max-h-[155.2px] w-[30vw] h-[10vh] absolute right-[7.5vw] bottom-[10vh]">
+                        <div className="flex justify-center">
+                            <img src="/hut.svg" alt="shield check" className="max-w-[51.04px] max-h-[53.2px] h-[5vh] w-[10vh]" />
+                        </div>
+                        <h3 className="font-medium text-[21px] text-center mt-[7.5px]">Buy & Rent Houses</h3>
+                        <p className="text-[15px] font-light text-center">We sell your home at the best market price and very quickly as well.</p>
+                    </div>
                 </div>
             </div>
         </div>
