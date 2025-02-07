@@ -2,6 +2,7 @@
 // sections
 import Banner from "./sections/Banner"
 import WorkWithUs from "./sections/WorkWithUs"
+import Companies from "./sections/Companies"
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <>
       <Banner />
       <WorkWithUs />
+      <Companies />
     </>
   )
 }
