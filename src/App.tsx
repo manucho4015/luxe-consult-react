@@ -6,6 +6,7 @@ import Companies from "./sections/Companies"
 import Categories from "./sections/Categories"
 import Properties from "./sections/properties/Index"
 import Ongoing from './sections/ongoing/Index'
+import ContactUs from "./sections/ContactUs"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Categories />
       <Properties />
       <Ongoing />
+      <ContactUs />
     </>
   )
 }
