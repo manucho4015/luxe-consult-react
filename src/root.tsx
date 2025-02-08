@@ -7,6 +7,7 @@ import { Link } from "react-router"
 const Root = () => {
     return (
         <div className='relative'>
+            {/* Navbar */}
             <nav className="top-[25px] absolute inline-flex justify-center w-full z-[20]">
                 <div className="h-[82.75px] w-[80%] rounded-[64px] bg-white flex items-center justify-between px-[25px] shadow">
                     <img src="/logo.svg" alt="Logo" className="h-[42.75px] w-[150px]" />

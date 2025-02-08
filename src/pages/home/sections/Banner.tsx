@@ -6,8 +6,6 @@ const Banner = () => {
     const [isActive, setIsActive] = useState('buy')
     return (
         <div className="min-h-[100vh] bg-red-200 relative">
-            {/* Navbar */}
-
 
             <div className="absolute bottom-10 flex flex-col w-full items-center">
                 {/* Type search toggle */}
