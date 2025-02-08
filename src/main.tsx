@@ -10,6 +10,7 @@ import './index.css'
 // pages
 import Root from './root.tsx';
 import Home from './pages/home/Index.tsx'
+import ContactUs from './pages/contact-us/Index.tsx';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-      }
+      },
+      {
+        path: "/contact-us",
+        element: <ContactUs />,
+      },
     ]
   }
 ])
