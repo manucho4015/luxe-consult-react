@@ -1,4 +1,4 @@
-
+import { Link } from "react-router"
 
 const Blog = () => {
     return (
@@ -11,11 +11,11 @@ const Blog = () => {
             <p className="mt-[20px]">Westlands has evolved into a premier investment destination in Nairobi, drawing in savvy investors from both local...</p>
 
 
-            <div className="inline-flex mt-[10px] items-center w-full">
+            <Link to={`1`} className="inline-flex mt-[10px] items-center w-full">
                 <p className="mr-[15px] text-[#98730C] capitalize">continue reading</p>
                 <img src="/right-primary.svg" alt="Right arrow primary" className="max-w-[16px] max-h-[16px] h-[5vh] w-[5vh]" />
 
-            </div>
+            </Link>
         </div>
     )
 }

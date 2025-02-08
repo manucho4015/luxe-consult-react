@@ -12,6 +12,7 @@ import Root from './root.tsx';
 import Home from './pages/home/Index.tsx'
 import ContactUs from './pages/contact-us/Index.tsx';
 import Blogs from './pages/blogs/Index.tsx';
+import Blog from './pages/blog/Index.tsx';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs />,
+      },
+      {
+        path: "/blogs/:blogId",
+        element: <Blog />,
       },
     ]
   }
