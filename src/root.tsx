@@ -95,7 +95,7 @@ const Root = () => {
                     </div>
                 </div>
 
-                <p className='text-white text-center mt-[25px]'>Copyright &copy; {new Date().getFullYear()}. Luxeconsult</p>
+                <p className='text-white text-center mt-[25px] text-[12px]'>Copyright &copy; {new Date().getFullYear()}. Luxeconsult</p>
             </div>
         </div>
     )
