@@ -11,6 +11,7 @@ import './index.css'
 import Root from './root.tsx';
 import Home from './pages/home/Index.tsx'
 import ContactUs from './pages/contact-us/Index.tsx';
+import Blogs from './pages/blogs/Index.tsx';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/contact-us",
         element: <ContactUs />,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs />,
       },
     ]
   }
