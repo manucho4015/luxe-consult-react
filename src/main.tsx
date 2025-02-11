@@ -13,6 +13,7 @@ import Home from './pages/home/Index.tsx'
 import ContactUs from './pages/contact-us/Index.tsx';
 import Blogs from './pages/blogs/Index.tsx';
 import Blog from './pages/blog/Index.tsx';
+import Team from './pages/team/Index.tsx';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/blogs/:blogId",
         element: <Blog />,
+      },
+      {
+        path: "/meet-the-team",
+        element: <Team />,
       },
     ]
   }
