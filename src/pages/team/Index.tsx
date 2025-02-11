@@ -1,6 +1,6 @@
 
 // components
-import TeamMember from "./TeamMember"
+import TeamMember from "./components/TeamMember"
 
 const Index = () => {
     const arr = Array.from(Array(6).keys())
