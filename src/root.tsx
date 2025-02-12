@@ -13,7 +13,8 @@ const Root = () => {
             {/* Navbar */}
             <nav className="top-[25px] absolute inline-flex justify-center w-full z-[20]">
                 <div className="h-[82.75px] w-[80%] rounded-[64px] bg-white flex items-center justify-between px-[25px] shadow">
-                    <img src="/logo.svg" alt="Logo" className="h-[42.75px] w-[150px]" />
+                    <img src="/logo.svg" alt="Logo" className="h-[42.75px] w-[150px] cursor-pointer"
+                        onClick={() => navigate('/')} />
                     <div className="w-[40%] flex justify-between font-light text-[16px]">
                         <Link to={`/`}>Home</Link>
                         <Link to={`/property-search`}>Property Search</Link>
