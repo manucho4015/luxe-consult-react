@@ -2,29 +2,17 @@
 //components
 import Card from "./components/Card"
 import Testimonials from "./components/Testimonials"
+import Download from "../../global/components/Download"
+import ContactUs from "../../global/components/ContactUs"
+
+// data
+import { elements } from "../../data/about-us"
 
 const Index = () => {
-    const elements = [
-        {
-            title: 'our mission',
-            description: 'Our mission is to empower individuals and businesses to achieve their real estate goals with integrity, innovation, and personalized service.'
-        },
-        {
-            title: 'our vision',
-            description: 'Our mission is to empower individuals and businesses to achieve their real estate goals with integrity, innovation, and personalized service.'
-        },
-        {
-            title: 'our values',
-            description: 'Our mission is to empower individuals and businesses to achieve their real estate goals with integrity, innovation, and personalized service.'
-        },
-        {
-            title: 'our spirit',
-            description: 'Our mission is to empower individuals and businesses to achieve their real estate goals with integrity, innovation, and personalized service.'
-        },
-    ]
+
     return (
         <>
-            <div className="min-h-[100vh] pb-[50px] w-full bg-linear-to-b from-[#F7E5D4] to-[#E9E9E9] inline-block">
+            <div className="min-h-[100vh] w-full bg-linear-to-b from-[#F7E5D4] to-[#E9E9E9] inline-block">
                 <h3 className="mt-[175px] text-center text-[30px] uppercase">our story</h3>
                 <h4 className="uppercase text-center text-[60px] mt-[15px] text-[#A37A52] font-bold">about us</h4>
                 <div className="inline-flex w-full justify-center mt-[15px]">
@@ -41,7 +29,11 @@ const Index = () => {
                     </div>
                 </div>
                 <Testimonials />
+                <div className="mb-[15px]">
+                    <Download />
+                </div>
             </div>
+            <ContactUs />
 
         </>
     )
