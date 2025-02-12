@@ -3,7 +3,7 @@
 import Banner from "./sections/Banner"
 import WorkWithUs from "./sections/WorkWithUs"
 import Companies from "./sections/Companies"
-import Categories from "./sections/Categories"
+import Popular from "./sections/Popular"
 import Properties from "./sections/properties/Index"
 import Ongoing from './sections/ongoing/Index'
 import ContactUs from "../../global/components/ContactUs"
@@ -16,7 +16,7 @@ function App() {
       <Banner />
       <WorkWithUs />
       <Companies />
-      <Categories />
+      <Popular />
       <Properties />
       <Ongoing />
       <ContactUs />
