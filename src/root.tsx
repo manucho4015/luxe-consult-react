@@ -1,10 +1,13 @@
 
 import { Outlet } from 'react-router'
 import { motion } from 'framer-motion'
-import { Link } from "react-router"
+import { Link, useNavigate } from "react-router"
 
+// data
+import { footerQuickLinks } from './data/root'
 
 const Root = () => {
+    const navigate = useNavigate()
     return (
         <div className='relative'>
             {/* Navbar */}
@@ -13,16 +16,16 @@ const Root = () => {
                     <img src="/logo.svg" alt="Logo" className="h-[42.75px] w-[150px]" />
                     <div className="w-[40%] flex justify-between font-light text-[16px]">
                         <Link to={`/`}>Home</Link>
-                        <Link to={`/`}>Property Search</Link>
-                        <Link to={`/`}>Our Services</Link>
-                        <Link to={`/`}>About Us</Link>
-                        <Link to={`/`}>Blogs</Link>
+                        <Link to={`/property-search`}>Property Search</Link>
+                        <Link to={`/services`}>Our Services</Link>
+                        <Link to={`/about-us`}>About Us</Link>
+                        <Link to={`/blogs`}>Blogs</Link>
                     </div>
                     <div className="flex items-center justify-between w-[10%]">
                         <img src="/call.svg" alt="Logo" className="h-[20px] w-[20px]" />
                         <p className="text-[16px]">+254712151558</p>
                     </div>
-                    <motion.button className="border-[1px] border-slate-400 h-[42.5px] w-[148.22px] rounded-4xl">
+                    <motion.button onClick={() => navigate('/contact-us')} whileTap={{ scale: .95 }} className="border-[1px] border-slate-400 h-[42.5px] w-[148.22px] rounded-4xl">
                         Contact Us
                     </motion.button>
                 </div>
@@ -73,12 +76,13 @@ const Root = () => {
                     <div className="col-span-1">
                         <h4 className='text-[#FFFFFF75] text-[19px] mb-[20px]'>Quick Links</h4>
                         <ul className='text-white'>
-                            <li className='mb-[15px]'>About</li>
-                            <li className='mb-[15px]'>Contact</li>
-                            <li className='mb-[15px]'>Leadership</li>
-                            <li className='mb-[15px]'>Blog</li>
-                            <li className='mb-[15px]'>Property Search</li>
-                            <li className='mb-[15px]'>Terms & Conditions</li>
+                            {
+                                footerQuickLinks.map((link, index) => (
+                                    <motion.li key={index} whileHover={{ translateX: '10px' }} className='mb-[15px] cursor-pointer capitalize'>
+                                        <Link to={link.url}>{link.label}</Link>
+                                    </motion.li>
+                                ))
+                            }
                         </ul>
                     </div>
 
