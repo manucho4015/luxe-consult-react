@@ -2,7 +2,7 @@
 
 // components
 import Banner from './components/Banner'
-import Property from './components/Property'
+import Property from '../../global/components/Property'
 import ContactUs from '../../global/components/ContactUs'
 
 const Index = () => {
