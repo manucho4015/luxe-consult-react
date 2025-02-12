@@ -7,7 +7,7 @@ import Categories from "./sections/Categories"
 import Properties from "./sections/properties/Index"
 import Ongoing from './sections/ongoing/Index'
 import ContactUs from "../../global/components/ContactUs"
-import Download from "./sections/Download"
+import Download from "../../global/components/Download"
 
 function App() {
 
