@@ -2,9 +2,9 @@ import { motion } from 'framer-motion'
 
 const ContactUs = () => {
     return (
-        <div className='inline-flex w-full min-h-[100vh] justify-between items-center px-[10vw] 
+        <div className='inline-flex w-full min-h-[100vh] justify-between items-center px-[7.5vw] 
             bg-linear-to-b from-[#EEC7A2] to-[#32260480]'>
-            <img src="/woman-caller.jpg" alt="woman caller" className='max-w-[777px] max-h-[842px] h-[80vh] w-[70vh]' />
+            <div className="inline-block bg-[url(/customer-service-representative.jpg)] bg-center bg-cover max-w-[777px] max-h-[842px] h-[80vh] w-[90vh] rounded-4xl border-[1.5px] border-white" />
             <div className="w-[40vw] max-w-[572px]">
                 <h5 className="text-[#585858]">Fill out this form and our agents will contact you shortly for detailed consultation.</h5>
                 <div className="mt-[25px]">

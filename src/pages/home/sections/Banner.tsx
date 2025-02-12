@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 const Banner = () => {
     const [isActive, setIsActive] = useState('buy')
     return (
-        <div className="min-h-[100vh] bg-red-200 relative">
+        <div className="min-h-[100vh] bg-[url(/beautiful-architecture-building.jpg)] bg-cover bg-center bg-blend-color bg-[#00000050] relative">
 
             <div className="absolute bottom-10 flex flex-col w-full items-center">
                 {/* Type search toggle */}
