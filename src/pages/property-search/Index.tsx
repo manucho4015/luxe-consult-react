@@ -10,13 +10,14 @@ const Index = () => {
     return (
         <>
             <Banner />
-            <div className="grid grid-cols-3 px-[2.5vw] gap-10 mt-[50px] mb-[50px] bg-transparent">
+            <div className="grid grid-cols-3 px-[2.5vw] gap-10 py-[50px] bg-[#E9E9E9]">
                 {
                     arr.map((item) => (
                         <Property key={item} />
                     ))
                 }
             </div>
+
             <ContactUs />
         </>
     )
