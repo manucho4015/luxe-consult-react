@@ -15,6 +15,7 @@ import Blogs from './pages/blogs/Index.tsx';
 import Blog from './pages/blog/Index.tsx';
 import Team from './pages/team/Index.tsx';
 import PropertySearch from './pages/property-search/Index.tsx';
+import SingleProperty from './pages/single-property/Index.tsx';
 import AboutUs from './pages/about-us/Index.tsx';
 import Services from './pages/services/Index.tsx';
 
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "/property-search",
         element: <PropertySearch />,
+      },
+      {
+        path: "/property-search/:propertyId",
+        element: <SingleProperty />,
       },
       {
         path: "/about-us",

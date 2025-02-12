@@ -21,6 +21,7 @@ const Banner = () => {
                         Rent
                     </motion.div>
                 </div>
+                {/* filter */}
                 <div className="w-[60%] min-w-[236px] h-[80px] px-[40px] bg-white shadow flex items-center justify-between rounded-[100px] mt-[15px]">
                     <div className="h-[50px] min-w-[49px] w-[15%] flex flex-col justify-between">
                         <p className='text-[16px] font-medium'>Search location</p>
