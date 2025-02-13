@@ -22,7 +22,7 @@ const Banner = () => {
                     </motion.div>
                 </div>
                 {/* filter */}
-                <div className="w-[60%] min-w-[236px] h-[80px] px-[40px] bg-white shadow flex items-center justify-between rounded-[100px] mt-[15px]">
+                <div className="w-[90%] lg:w-[60%] min-w-[236px] h-fit min-h-[80px] pr-[20px] pl-[40px] py-[10px] bg-white shadow flex items-center justify-between rounded-[100px] mt-[15px]">
                     <div className="h-[50px] min-w-[49px] w-[15%] flex flex-col justify-between">
                         <p className='text-[16px] font-medium'>Search location</p>
                         <input type="text" name="message" id="message" className=' h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[20px] text-sm text-[#797E82] outline-none focus:border-primary focus:border-b-[1.65px] ease-in-out duration-200' />

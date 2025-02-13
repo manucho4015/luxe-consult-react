@@ -1,3 +1,26 @@
+export const navbarLinks = [
+    {
+        label: 'home',
+        url: '/'
+    },
+    {
+        label: 'property search',
+        url: '/property-search'
+    },
+
+    {
+        label: 'our services',
+        url: '/services'
+    },
+    {
+        label: 'about us',
+        url: '/about-us'
+    },
+    {
+        label: 'contact',
+        url: '/contact-us'
+    }
+]
 export const footerQuickLinks = [
     {
         label: 'about',

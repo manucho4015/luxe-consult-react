@@ -1,53 +1,101 @@
-
+import { useState } from 'react'
 import { Outlet } from 'react-router'
 import { motion } from 'framer-motion'
 import { Link, useNavigate } from "react-router"
 
 // data
-import { footerQuickLinks } from './data/root'
+import { navbarLinks, footerQuickLinks } from './data/root'
 
 const Root = () => {
     const navigate = useNavigate()
+    const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
+
+    // framer motion stagger
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.25
+            }
+        },
+        exit: {
+            opacity: 0,
+            transition: {
+                staggerChildren: 0.25
+            }
+        }
+    };
+    const listItem = {
+        hidden: { opacity: 0, translateX: '-50px' },
+        show: { opacity: 1, translateX: 0 },
+        exit: { opacity: 0, translateX: '-50px' }
+    };
     return (
         <div className='relative'>
             {/* Navbar */}
-            <nav className="top-[25px] absolute inline-flex justify-center w-full z-[20]">
-                <div className="h-[82.75px] w-[80%] rounded-[64px] bg-white flex items-center justify-between px-[25px] shadow">
-                    <img src="/logo.svg" alt="Logo" className="h-[42.75px] w-[150px] cursor-pointer"
-                        onClick={() => navigate('/')} />
-                    <div className="w-[40%] flex justify-between font-light text-[16px]">
-                        <Link to={`/`}>Home</Link>
-                        <Link to={`/property-search`}>Property Search</Link>
-                        <Link to={`/services`}>Our Services</Link>
-                        <Link to={`/about-us`}>About Us</Link>
-                        <Link to={`/blogs`}>Blogs</Link>
+            <nav className="md:top-[25px] top-0 absolute inline-flex md:justify-center w-full z-[20]">
+                <motion.div className="md:h-[82.75px] w-full md:w-[90%] lg:w-[80%] md:rounded-[64px] bg-white flex flex-col md:flex-row md:items-center md:justify-between px-[10vw] md:px-[25px] md:py-0 py-[25px] shadow">
+                    <div className="flex justify-between md:m-0 mb-[10px]">
+                        <img src="/logo.svg" alt="Logo" className="h-[42.75px] w-[150px] cursor-pointer"
+                            onClick={() => navigate('/')} />
+                        <button onClick={() => setIsMobileNavOpen(!isMobileNavOpen)} data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden outline-none ring-2 hover:bg-gray-700 ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                            <span className="sr-only">Open main menu</span>
+                            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                            </svg>
+                        </button>
+
                     </div>
-                    <div className="flex items-center justify-between w-[10%]">
+                    <div className="w-[50%] lg:w-[40%] hidden md:flex flex-wrap md:flex-row flex-col justify-between font-light text-[16px]">
+                        {
+                            navbarLinks.map((link, index) => (
+                                <Link key={index} to={link.url} className='capitalize md:m-0 mb-[10px]'>{link.label}</Link>
+                            ))
+                        }
+                    </div>
+                    {
+                        isMobileNavOpen && (
+                            <motion.div variants={container} initial="hidden" animate="show" exit="exit" className="w-[50%] lg:w-[40%] flex flex-wrap md:flex-row flex-col justify-between font-light text-[16px]">
+                                {
+                                    navbarLinks.map((link, index) => (
+                                        <motion.span variants={listItem} className='md:m-0 mb-[10px]'><Link key={index} to={link.url} className='capitalize'>{link.label}</Link></motion.span>
+
+                                    ))
+                                }
+                            </motion.div>
+                        )
+                    }
+
+                    <div className="hidden lg:flex items-center justify-between w-[10%]">
                         <img src="/call.svg" alt="Logo" className="h-[20px] w-[20px]" />
                         <p className="text-[16px]">+254712151558</p>
                     </div>
-                    <motion.button onClick={() => navigate('/contact-us')} whileTap={{ scale: .95 }} className="border-[1px] border-slate-400 h-[42.5px] w-[148.22px] rounded-4xl">
+                    <motion.button onClick={() => navigate('/contact-us')} whileTap={{ scale: .95 }} className="hidden md:inline-block border-[1px] border-slate-400 h-[42.5px] w-[148.22px] rounded-4xl">
                         Contact Us
                     </motion.button>
-                </div>
+                </motion.div>
             </nav>
+
             <Outlet />
-            <div className='w-full min-h-[75vh] bg-black py-[25px] px-[5vw]'>
-                <div className="flex justify-between items-center">
+
+            {/* Footer */}
+            <div className='w-full min-h-[75vh] bg-black py-[25px]'>
+                <div className="flex flex-wrap md:justify-between items-center px-[5vw]">
                     {/* logo */}
                     <img src="/logo-white.svg" alt="logo white" className="max-w-[200px] max-h-[56px] h-[20vh] w-[40vh]" />
                     {/* social media */}
-                    <div className="max-w-[352px] max-h-[40px] h-[15vh] w-[40vh] flex items-center">
+                    <div className="max-w-[352px] max-h-[40px] h-[15vh] w-[40vh] flex items-center md:m-0 mt-[20px]">
                         <p className='text-white mr-[50px] capitalize'>follow us</p>
-                        <img src="/facebook-white.svg" alt="facebook" className="max-w-[9.68px] max-h-[15px] h-[5vh] w-[4.5vh] mr-[15px]" />
-                        <img src="/twitter-white.svg" alt="twitter" className="max-w-[13.51px] max-h-[15px] h-[5vh] w-[4.75vh] mr-[15px]" />
-                        <img src="/instagram-white.svg" alt="instagram" className="max-w-[12.56px] max-h-[15px] h-[5vh] w-[4.7vh] mr-[15px]" />
-                        <img src="/linkedin-white.svg" alt="LinkedIn" className="max-w-[13.48px] max-h-[15px] h-[5vh] w-[4.77vh] mr-[15px]" />
+                        <img src="/facebook-white.svg" alt="facebook" className="h-[20px] w-[20px] md:max-w-[9.68px] md:max-h-[15px] md:h-[5vh] md:w-[4.5vh] mr-[15px]" />
+                        <img src="/twitter-white.svg" alt="twitter" className=" h-[20px] w-[20px] md:max-w-[13.51px] md:max-h-[15px] md:h-[5vh] md:w-[4.75vh] mr-[15px]" />
+                        <img src="/instagram-white.svg" alt="instagram" className="h-[20px] w-[20px] md:max-w-[12.56px] md:max-h-[15px] md:h-[5vh] md:w-[4.7vh] mr-[15px]" />
+                        <img src="/linkedin-white.svg" alt="LinkedIn" className="h-[20px] w-[20px] md:max-w-[13.48px] md:max-h-[15px] md:h-[5vh] md:w-[4.77vh] mr-[15px]" />
                     </div>
                 </div>
 
                 {/* grid */}
-                <div className="mt-[100px] grid grid-cols-9 gap-5">
+                <div className="mt-[50px] md:mt-[100px] grid grid-cols-2 md:grid-cols-9 gap-5 px-[5vw]">
                     {/* subscribe */}
                     <div className="col-span-3">
                         <h4 className='text-[#FFFFFF75] text-[19px] mb-[20px]'>Subscribe</h4>
@@ -101,7 +149,7 @@ const Root = () => {
                     </div>
                 </div>
 
-                <p className='text-white text-center mt-[25px] text-[12px]'>Copyright &copy; {new Date().getFullYear()}. Luxeconsult</p>
+                <p className='text-white text-center mt-[25px] text-[12px] border-t-[1px] border-white pt-[10px]'>Copyright &copy; {new Date().getFullYear()}. Luxeconsult</p>
             </div>
         </div>
     )
