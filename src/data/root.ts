@@ -32,7 +32,7 @@ export const footerQuickLinks = [
     },
     {
         label: 'leadership',
-        url: '/about-us'
+        url: '/meet-the-team'
     },
     {
         label: 'blogs',
