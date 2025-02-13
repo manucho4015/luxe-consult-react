@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 const Filter = () => {
     return (
         <div className="absolute -bottom-10 flex flex-col w-full items-center">
-            <div className="w-[60%] min-w-[236px] h-[80px] px-[40px] bg-[#00000073] text-white shadow flex items-center justify-between rounded-[100px] mt-[15px]">
+            <div className="w-[90%] h-[100px] md:w-[60%] md:min-w-[236px] md:h-[80px] pl-[40px] pr-[15px] md:px-[40px] bg-[#00000073] text-white shadow flex items-center justify-between rounded-[100px] mt-[15px]">
                 <div className="h-[50px] min-w-[49px] w-[15%] flex flex-col justify-between">
                     <p className='text-[16px] font-medium'>Search location</p>
                     <input type="text" name="message" id="message" className=' h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[20px] text-sm text-[#797E82] outline-none focus:border-primary focus:border-b-[1.65px] ease-in-out duration-200' />
