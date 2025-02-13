@@ -10,7 +10,7 @@ const Index = () => {
     return (
         <>
             <Banner />
-            <div className="grid grid-cols-3 px-[2.5vw] gap-10 py-[50px] bg-[#E9E9E9]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-[10vw] lg:px-[2.5vw] gap-10 py-[50px] bg-[#E9E9E9]">
                 {
                     arr.map((item) => (
                         <Property key={item} />

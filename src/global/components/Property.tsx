@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 
 const Property = () => {
     return (
-        <div className='bg-[#1F4B3F05] inline-block rounded-2xl p-[15px] max-w-[465px] max-h-[720.67px] w-[30vw] h-[85vh] shadow'>
+        <div className='bg-[#1F4B3F05] inline-block rounded-2xl p-[15px] w-full md:w-[40vw] lg:max-w-[465px] lg:max-h-[720.67px] lg:w-[30vw] lg:h-[85vh] shadow'>
             {/* image */}
             <div className="bg-red-200 rounded-2xl p-[10px]  max-h-[296.27px] w-full h-[55vh]">
                 <div className="flex">
