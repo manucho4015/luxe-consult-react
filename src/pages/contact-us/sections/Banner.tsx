@@ -3,10 +3,10 @@
 const Banner = () => {
     return (
         <div className="min-h-[100vh] w-full bg-linear-to-b from-[#F7E5D4] to-[#E9E9E9] inline-flex items-center justify-center">
-            <div className="h-[50vh] w-[75vw]">
-                <h4 className="uppercase text-center text-[30px]">we'd love to hear from you</h4>
-                <h4 className="uppercase text-center text-[60px] text-[#A37A52] font-bold">contact us</h4>
-                <div className="grid grid-cols-3 mt-[50px]">
+            <div className="h-[50vh] w-[90vw] lg:w-[75vw]">
+                <h4 className="uppercase text-center text-[20px] md:text-[30px]">we'd love to hear from you</h4>
+                <h4 className="uppercase text-center text-[40px] md:text-[60px] text-[#A37A52] font-bold">contact us</h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 mt-[50px]">
                     <div className="text-center">
                         <h5 className="uppercase mb-[25px] text-[30px]">find us here</h5>
                         <p className="text-[#6D6D6D] text-[20px]">6th Floor, Western Towers</p>
