@@ -2,7 +2,7 @@ import { Link } from "react-router"
 
 const Blog = () => {
     return (
-        <div className='bg-white inline-block rounded-2xl p-[15px] max-w-[465px] max-h-[520.67px] w-[20vw] h-[85vh] shadow'>
+        <div className='bg-white inline-block rounded-2xl p-[15px] max-w-[465px] lg:max-h-[520.67px] w-full md:w-[40vw] lg:w-[20vw] h-fit lg:h-[85vh] shadow'>
             {/* image */}
             <div className="bg-red-400 rounded-2xl p-[10px]  max-h-[296.27px] w-full h-[30vh]">
             </div>
