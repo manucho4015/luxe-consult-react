@@ -80,7 +80,7 @@ const Root = () => {
             <Outlet />
 
             {/* Footer */}
-            <div className='w-full min-h-[75vh] bg-black py-[25px]'>
+            <div className='w-full bg-black py-[25px]'>
                 <div className="flex flex-wrap md:justify-between items-center px-[5vw]">
                     {/* logo */}
                     <img src="/logo-white.svg" alt="logo white" className="max-w-[200px] max-h-[56px] h-[20vh] w-[40vh]" />
