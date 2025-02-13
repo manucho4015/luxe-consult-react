@@ -1,21 +1,24 @@
 import { motion } from "framer-motion"
+import { Link } from "react-router"
 
 const Property = () => {
     return (
         <div className='bg-[#1F4B3F05] inline-block rounded-2xl p-[15px] w-full md:w-[40vw] lg:max-w-[465px] lg:max-h-[720.67px] lg:w-[30vw] lg:h-[85vh] shadow'>
             {/* image */}
-            <div className="bg-red-200 rounded-2xl p-[10px]  max-h-[296.27px] w-full h-[55vh]">
-                <div className="flex">
-                    <div
-                        className={`h-[33px] w-[92px] cursor-default text-white bg-[#1F4B43] text-[13px] flex items-center justify-center  rounded-[40px] uppercase mr-[15px]`}>
-                        for sale
-                    </div>
-                    <div
-                        className={`h-[33px] w-[92px] cursor-default text-white bg-primary text-[13px] flex items-center justify-center  rounded-[40px] uppercase`}>
-                        featured
+            <Link to={`/property-search/1`}>
+                <div className="bg-red-200 rounded-2xl p-[10px]  max-h-[296.27px] w-full h-[55vh]">
+                    <div className="flex">
+                        <div
+                            className={`h-[33px] w-[92px] cursor-default text-white bg-[#1F4B43] text-[13px] flex items-center justify-center  rounded-[40px] uppercase mr-[15px]`}>
+                            for sale
+                        </div>
+                        <div
+                            className={`h-[33px] w-[92px] cursor-default text-white bg-primary text-[13px] flex items-center justify-center  rounded-[40px] uppercase`}>
+                            featured
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Link>
             <div className="inline-flex mt-[45px] justify-between items-center w-full">
                 <p className="text-[19px]">Luxury Family Home</p>
                 <p className="text-[21px] font-medium text-primary">Ksh.3,995,000</p>
