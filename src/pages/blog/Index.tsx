@@ -11,12 +11,12 @@ const Index = () => {
             <div className="inline-flex justify-center w-full">
                 <div className="w-[85%]">
                     <h3 className="mt-[175px] text-[25px] uppercase">why westlands is a prime investment destination in nairobi</h3>
-                    <div className="flex justify-between items-center mt-[25px] max-w-[691px] w-[42.5vw]">
-                        <p className="text-[#969696] capitalize text-[16px]">home</p>
-                        <img src="/chevron-right-grey.svg" alt="chevron right grey" className="max-w-[6.17px] max-h-[10px] h-[5vh] w-[5vh]" />
-                        <p className="text-[#969696] capitalize text-[16px]">blogs</p>
-                        <img src="/chevron-right-grey.svg" alt="chevron right grey" className="max-w-[6.17px] max-h-[10px] h-[5vh] w-[5vh]" />
-                        <p className="text-[#969696] uppercase text-[16px]">why westlands is a prime investment destination in nairobi</p>
+                    <div className="flex flex-wrap md:justify-between items-center mt-[25px] max-w-[691px] w-[80vw] lg:w-[42.5vw]">
+                        <p className="text-[#969696] capitalize text-[16px] md:m-0 mr-[10px]">home</p>
+                        <img src="/chevron-right-grey.svg" alt="chevron right grey" className="max-w-[6.17px] max-h-[10px] h-[5vh] w-[5vh] md:m-0 mr-[10px]" />
+                        <p className="text-[#969696] capitalize text-[16px] md:m-0 mr-[10px]">blogs</p>
+                        <img src="/chevron-right-grey.svg" alt="chevron right grey" className="max-w-[6.17px] max-h-[10px] h-[5vh] w-[5vh] md:m-0 mr-[10px]" />
+                        <p className="text-[#969696] uppercase text-[16px] md:m-0 mt-[10px]">why westlands is a prime investment destination in nairobi</p>
                     </div>
                     <Blog />
                     <Reply />

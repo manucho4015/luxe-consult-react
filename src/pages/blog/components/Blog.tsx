@@ -4,7 +4,7 @@ const Blog = () => {
     return (
         <div className='bg-white inline-block rounded-2xl p-[25px] w-full shadow mt-[75px]'>
             {/* image */}
-            <div className="bg-red-400 rounded-2xl p-[10px] w-full h-[75vh]">
+            <div className="bg-red-400 rounded-2xl p-[10px] w-full h-[50vh] md:h-[75vh]">
             </div>
             <h5 className="text-[#98730C] text-[30px] capitalize font-semibold mt-[50px]">why westlands is a prime investment destination in nairobi</h5>
             <div className="inline-flex mt-[25px]">

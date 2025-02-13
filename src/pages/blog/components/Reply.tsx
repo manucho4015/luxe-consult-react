@@ -9,8 +9,8 @@ const Reply = () => {
                     border-gray-300 focus:ring-blue-500 focus:border-blue-500 focus:outline-none"
                 placeholder="Comment..." />
             <div className="mt-[25px]">
-                <input type="text" id="notification-title" className="bg-gray-50 border-[1px] border-slate-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-0 focus:outline-none w-[273px] md:w-[40%] p-2.5  placeholder-gray-400 mr-[15px]" placeholder="Name" required />
-                <input type="email" id="notification-title" className="bg-gray-50 border-[1px] border-slate-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-0 focus:outline-none w-[273px] md:w-[40%] p-2.5  placeholder-gray-400" placeholder="Email" required />
+                <input type="text" id="notification-title" className="bg-gray-50 border-[1px] border-slate-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-0 focus:outline-none w-[273px] md:w-[45%] lg:w-[40%]  p-2.5  placeholder-gray-400 mr-[10%] lg:mr-[15px]" placeholder="Name" required />
+                <input type="email" id="notification-title" className="bg-gray-50 border-[1px] border-slate-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-0 focus:outline-none w-[273px] md:w-[45%] lg:w-[40%]  p-2.5  placeholder-gray-400" placeholder="Email" required />
             </div>
             {/* checkbox */}
             <div className="flex items-center mt-[25px]">
