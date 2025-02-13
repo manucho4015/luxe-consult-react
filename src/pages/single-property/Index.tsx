@@ -18,7 +18,7 @@ const Index = () => {
             </div>
             <Description />
             <h4 className="font-medium mt-[25px] text-[30px] px-[2.5vw]">Similar Listings</h4>
-            <div className="grid grid-cols-3 px-[2.5vw] gap-10 mt-[25px] mb-[50px] bg-transparent">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-[10vw] lg:px-[2.5vw] gap-10 mt-[25px] mb-[50px] bg-transparent">
                 {
                     arr.map((item) => (
                         <Property key={item} />
