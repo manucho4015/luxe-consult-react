@@ -36,3 +36,7 @@ export const selectToggles = [
         value: 'mansion',
     },
 ]
+
+export const propertyTypes = ['bungalow', 'apartment', 'modern villa', 'townhouse', 'penthouse']
+
+export const bedrooms = ['bedsitter', '1 bedroom', '2 bedrooms', '3 bedrooms', '4 bedrooms']
