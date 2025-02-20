@@ -14,9 +14,8 @@ const Banner = () => {
                     </div>
                     <div className="text-center">
                         <h5 className="uppercase mb-[25px] text-[30px]">get in touch</h5>
-                        <p className="text-[#6D6D6D] text-[20px]">Customer@Luxeconsult.com</p>
-                        <p className="text-[#6D6D6D] text-[20px]">Hello@Luxeconsult.com</p>
-                        <p className="text-[#6D6D6D] text-[20px]">+254712435678</p>
+                        <p className="text-[#6D6D6D] text-[20px]">gb@luxe-consult.com</p>
+                        <p className="text-[#6D6D6D] text-[20px]">+2547 68 096 084</p>
                     </div>
                     <div className="text-center">
                         <h5 className="uppercase mb-[25px] text-[30px]">working hours</h5>

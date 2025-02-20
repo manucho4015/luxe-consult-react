@@ -67,9 +67,9 @@ const Root = () => {
                         )
                     }
 
-                    <div className="hidden lg:flex items-center justify-between w-[10%]">
-                        <img src="/call.svg" alt="Logo" className="h-[20px] w-[20px]" />
-                        <p className="text-[16px]">+254712151558</p>
+                    <div className="hidden lg:flex items-center justify-between w-[13%]">
+                        <img src="/call.svg" alt="Logo" className="h-[20px] w-[20px] " />
+                        <p className="text-[16px]">+2547 68 096 084</p>
                     </div>
                     <motion.button onClick={() => navigate('/contact-us')} whileTap={{ scale: .95 }} className="hidden md:inline-block border-[1px] border-slate-400 h-[42.5px] w-[148.22px] rounded-4xl">
                         Contact Us
@@ -138,8 +138,8 @@ const Root = () => {
                     {/* contact us */}
                     <div className="col-span-2">
                         <h4 className='text-[#FFFFFF75] text-[19px] mb-[20px]'>Contact Us</h4>
-                        <p className='text-white'>hello@luxeconsult.com</p>
-                        <p className='text-white'>(123) 456-789</p>
+                        <p className='text-white'>gb@luxe-consult.com</p>
+                        <p className='text-white'>+2547 68 096 084</p>
                     </div>
                     {/* address */}
                     <div className="col-span-2">
