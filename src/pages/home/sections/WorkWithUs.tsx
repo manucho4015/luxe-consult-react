@@ -22,9 +22,8 @@ const WorkWithUs = () => {
                         </div>
                     </div>
                     <div className="flex flex-col items-center">
-
                         {/* black Card */}
-                        <div className="rounded-2xl bg-black flex justify-center items-center h-[200px] w-[250px] md:h-[35%] md:w-[70%] md:max-h-[270px] md:max-w-[300px]  mt-8">
+                        <div className="rounded-2xl bg-black flex justify-center items-center h-[200px] w-[250px] md:h-[35%] md:w-[70%] md:max-h-[270px] md:max-w-[300px]  mb-8">
                             <div className='flex flex-col items-center'>
                                 <div className="rounded-full bg-primary flex items-center justify-center h-[60px] w-[60px] md:h-[4vw] md:w-[4vw] max-h-[90px] max-w-[90px]">
                                     <img src="/house-white.svg" alt="people shaking hands" className='h-[30px] w-[30px] md:h-[2vw] md:w-[2vw] max-h-[38.4px] max-w-[37.9px]' />
@@ -33,7 +32,7 @@ const WorkWithUs = () => {
                             </div>
                         </div>
                         {/* Image 2 */}
-                        <img src="/mansion.jpg" alt="mansion" className='max-h-[473px] max-w-[400px] h-[70%] w-[90%] mt-8' />
+                        <img src="/mansion.jpg" alt="mansion" className='max-h-[473px] max-w-[400px] h-[70%] w-[90%]' />
                     </div>
 
                 </div>
