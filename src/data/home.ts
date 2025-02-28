@@ -41,3 +41,38 @@ export const propertyTypes = ['bungalow', 'apartment', 'modern villa', 'townhous
 
 export const bedrooms = ['bedsitter', '1 bedroom', '2 bedrooms', '3 bedrooms', '4 bedrooms']
 export const bathrooms = ['1 bathroom', '2 bathrooms', '3 bathrooms', '4 bathrooms']
+
+export const companies = [
+    {
+        src: '/sojitz-logo.png',
+        alt: 'Sojitz'
+    },
+    {
+        src: '/jetro-logo.png',
+        alt: 'Jetro'
+    },
+    {
+        src: '/un-logo.png',
+        alt: 'United Nations'
+    },
+    {
+        src: '/world-bank-logo.png',
+        alt: 'World Bank'
+    },
+    {
+        src: '/iom-logo.png',
+        alt: 'IOM'
+    },
+    {
+        src: '/unicef-logo.png',
+        alt: 'UNICEF'
+    },
+    {
+        src: '/usaid-logo.png',
+        alt: 'USAID'
+    },
+    {
+        src: '/red-cross-logo.jpg',
+        alt: 'Red Cross'
+    },
+]
