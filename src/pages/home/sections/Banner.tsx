@@ -11,6 +11,7 @@ const Banner = () => {
     const [showPropertyDropdown, setShowPropertyDropdown] = useState(false)
     const [bedroomState, setBedroomState] = useState('1 bedroom')
     const [showBedroomsDropdown, setShowBedroomsDropdown] = useState(false)
+    const [budget, setBudget] = useState('Max ')
     return (
         <div className="min-h-[100vh] bg-[url(/beautiful-architecture-building.jpg)] bg-cover bg-center bg-blend-color bg-[#00000050] relative">
 
@@ -89,7 +90,7 @@ const Banner = () => {
                     {/* budget */}
                     <div className="h-[50px] min-w-[49px] w-[15%] flex flex-col justify-between">
                         <p className='text-[16px] font-medium'>Enter Budget</p>
-                        <input type="text" name="message" id="message" className=' h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[20px] text-sm text-[#797E82] outline-none focus:border-primary focus:border-b-[1.65px] ease-in-out duration-200' />
+                        <input type="text" name="message" id="message" className=' h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[20px] text-sm text-[#797E82] outline-none focus:border-primary focus:border-b-[1.65px] ease-in-out duration-200' value={budget} onChange={(e) => setBudget(`Max ${e.target.value.split(' ')[1]}`)} />
                     </div>
                     <motion.div whileTap={{ scale: .95 }}
                         className={`h-[53px] w-[98px] text-[18px] font-medium cursor-default flex items-center justify-center bg-primary rounded-[40px]`}>

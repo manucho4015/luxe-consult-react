@@ -47,7 +47,7 @@ const Root = () => {
                         </button>
 
                     </div>
-                    <div className="w-[50%] lg:w-[50%] hidden md:flex flex-wrap md:flex-row flex-col justify-between font-light text-[16px]">
+                    <div className="w-[50%] lg:w-[40%] hidden md:flex flex-wrap md:flex-row flex-col justify-between font-light text-[16px]">
                         {
                             navbarLinks.map((link, index) => (
                                 <Link key={index} to={link.url} className='capitalize md:m-0 mb-[10px]'>{link.label}</Link>
@@ -138,14 +138,14 @@ const Root = () => {
                     {/* contact us */}
                     <div className="col-span-2">
                         <h4 className='text-[#FFFFFF75] text-[19px] mb-[20px]'>Contact Us</h4>
-                        <p className='text-white'>gb@luxe-consult.com</p>
+                        <p className='text-white'>hello@luxe-consult.com</p>
                         <p className='text-white'>+2547 68 096 084</p>
                     </div>
                     {/* address */}
                     <div className="col-span-2">
                         <h4 className='text-[#FFFFFF75] text-[19px] mb-[20px]'>Our Address</h4>
-                        <p className='text-white'>99 Fifth Avenue, 3rd Floor</p>
-                        <p className='text-white'>Nairobi, Kenya CA 1980</p>
+                        <p className='text-white'>Riverside Square, Riverside drive</p>
+                        <p className='text-white'>Nairobi, Kenya</p>
                     </div>
                 </div>
 

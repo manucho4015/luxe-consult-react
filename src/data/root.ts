@@ -8,18 +8,18 @@ export const navbarLinks = [
         url: '/property-search'
     },
 
-    {
-        label: 'our services',
-        url: '/services'
-    },
+    // {
+    //     label: 'our services',
+    //     url: '/services'
+    // },
     {
         label: 'about us',
         url: '/about-us'
     },
-    {
-        label: 'contact',
-        url: '/contact-us'
-    }
+    // {
+    //     label: 'contact',
+    //     url: '/contact-us'
+    // }
 ]
 export const footerQuickLinks = [
     {

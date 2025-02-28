@@ -19,7 +19,7 @@ const Properties = () => {
                 <div className="flex flex-wrap lg:justify-between w-[90vw]">
                     {
                         selectToggles.map((toggle) => (
-                            <motion.div animate={{ backgroundColor: isActive == toggle.value ? '#1F4B43' : '#E9E9E9', color: isActive == toggle.value ? '#fff' : '#1F4B43' }}
+                            <motion.div animate={{ backgroundColor: isActive == toggle.value ? '#000' : '#E9E9E9', color: isActive == toggle.value ? '#fff' : '#000' }}
                                 className={`min-h-[53px] min-w-[141px] px-[15px] mr-[10px] mb-[10px] lg:m-0 cursor-default text-[18px] flex items-center justify-center  rounded-xl capitalize `}
                                 onClick={() => setIsActive(toggle.value)}>
                                 {toggle.label}

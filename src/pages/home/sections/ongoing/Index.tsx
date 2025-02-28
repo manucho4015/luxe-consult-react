@@ -14,17 +14,17 @@ const Properties = () => {
             <div className="inline-flex mt-[25px] justify-center w-full">
                 {/* select toggle */}
                 <div className="flex flex-wrap md:justify-between max-w-[550px] w-[80vw] md:w-[60vw] lg:w-[40vw]">
-                    <motion.div animate={{ backgroundColor: isActive == 'all' ? '#1F4B43' : '#fff', color: isActive == 'all' ? '#fff' : '#000', borderColor: isActive == 'all' ? '#fff' : '#1F4B43' }}
+                    <motion.div animate={{ backgroundColor: isActive == 'all' ? '#000' : '#fff', color: isActive == 'all' ? '#fff' : '#000', borderColor: isActive == 'all' ? '#fff' : '#000' }}
                         className={`h-[53px] min-w-[141px] cursor-default border-[1px] text-[18px] flex items-center justify-center rounded-[40px] md:m-0 mr-[10px] mb-[10px]`}
                         onClick={() => setIsActive('all')}>
                         All Properties
                     </motion.div>
-                    <motion.div animate={{ backgroundColor: isActive == 'rent' ? '#1F4B43' : '#fff', color: isActive == 'rent' ? '#fff' : '#000', borderColor: isActive == 'rent' ? '#fff' : '#1F4B43' }}
+                    <motion.div animate={{ backgroundColor: isActive == 'rent' ? '#000' : '#fff', color: isActive == 'rent' ? '#fff' : '#000', borderColor: isActive == 'rent' ? '#fff' : '#000' }}
                         className={`h-[53px] min-w-[141px] cursor-default border-[1px] text-[18px] flex items-center justify-center  rounded-[40px] md:m-0 mr-[10px]`}
                         onClick={() => setIsActive('rent')}>
                         For Rent
                     </motion.div>
-                    <motion.div animate={{ backgroundColor: isActive == 'sale' ? '#1F4B43' : '#fff', color: isActive == 'sale' ? '#fff' : '#000', borderColor: isActive == 'sale' ? '#fff' : '#1F4B43' }}
+                    <motion.div animate={{ backgroundColor: isActive == 'sale' ? '#000' : '#fff', color: isActive == 'sale' ? '#fff' : '#000', borderColor: isActive == 'sale' ? '#fff' : '#000' }}
                         className={`h-[53px] min-w-[141px] cursor-default border-[1px] text-[18px] flex items-center justify-center  rounded-[40px] md:m-0 mr-[10px]`}
                         onClick={() => setIsActive('sale')}>
                         For Sale

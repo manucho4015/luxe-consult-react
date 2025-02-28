@@ -9,12 +9,12 @@ const Banner = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 mt-[50px]">
                     <div className="text-center">
                         <h5 className="uppercase mb-[25px] text-[30px]">find us here</h5>
-                        <p className="text-[#6D6D6D] text-[20px]">6th Floor, Western Towers</p>
-                        <p className="text-[#6D6D6D] text-[20px]">Muthithi Road Off Mpesi Lane</p>
+                        <p className="text-[#6D6D6D] text-[20px]">Riverside Square, Riverside drive</p>
+                        <p className="text-[#6D6D6D] text-[20px]">Nairobi, Kenya</p>
                     </div>
                     <div className="text-center">
                         <h5 className="uppercase mb-[25px] text-[30px]">get in touch</h5>
-                        <p className="text-[#6D6D6D] text-[20px]">gb@luxe-consult.com</p>
+                        <p className="text-[#6D6D6D] text-[20px]">hello@luxe-consult.com</p>
                         <p className="text-[#6D6D6D] text-[20px]">+2547 68 096 084</p>
                     </div>
                     <div className="text-center">

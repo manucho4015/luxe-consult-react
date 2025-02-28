@@ -9,7 +9,7 @@ const Property = () => {
                 <div className="bg-red-200 rounded-2xl p-[10px]  max-h-[296.27px] w-full h-[55vh]">
                     <div className="flex">
                         <div
-                            className={`h-[33px] w-[92px] cursor-default text-white bg-[#1F4B43] text-[13px] flex items-center justify-center  rounded-[40px] uppercase mr-[15px]`}>
+                            className={`h-[33px] w-[92px] cursor-default text-white bg-black text-[13px] flex items-center justify-center  rounded-[40px] uppercase mr-[15px]`}>
                             for sale
                         </div>
                         <div

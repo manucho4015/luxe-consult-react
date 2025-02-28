@@ -17,7 +17,7 @@ import Team from './pages/team/Index.tsx';
 import PropertySearch from './pages/property-search/Index.tsx';
 import SingleProperty from './pages/single-property/Index.tsx';
 import AboutUs from './pages/about-us/Index.tsx';
-import Services from './pages/services/Index.tsx';
+// import Services from './pages/services/Index.tsx';
 
 const router = createBrowserRouter([
   {
@@ -56,10 +56,10 @@ const router = createBrowserRouter([
         path: "/about-us",
         element: <AboutUs />,
       },
-      {
-        path: "/services",
-        element: <Services />,
-      },
+      // {
+      //   path: "/services",
+      //   element: <Services />,
+      // },
     ]
   }
 ])
