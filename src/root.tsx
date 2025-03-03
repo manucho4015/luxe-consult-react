@@ -33,7 +33,7 @@ const Root = () => {
     };
     return (
         <div className='relative'>
-            {/* Navbar */}
+            {/* Navbar (Medium screens and bigger) */}
             <nav className="md:top-[25px] top-0 absolute inline-flex md:justify-center w-full z-[20]">
                 <motion.div className="md:h-[82.75px] w-full md:w-[90%] lg:w-[80%] md:rounded-[64px] bg-white flex flex-col md:flex-row md:items-center md:justify-between px-[10vw] md:px-[25px] md:py-0 py-[25px] shadow">
                     <div className="flex justify-between md:m-0 mb-[10px]">
@@ -54,12 +54,13 @@ const Root = () => {
                             ))
                         }
                     </div>
+                    {/* navbar (mobile screens) */}
                     {
                         isMobileNavOpen && (
                             <motion.div variants={container} initial="hidden" animate="show" exit="exit" className="w-[50%] lg:w-[40%] flex flex-wrap md:flex-row flex-col justify-between font-light text-[16px]">
                                 {
                                     navbarLinks.map((link, index) => (
-                                        <motion.span variants={listItem} className='md:m-0 mb-[10px]'><Link key={index} to={link.url} className='capitalize'>{link.label}</Link></motion.span>
+                                        <motion.span variants={listItem} className='md:m-0 mb-[10px]' onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}><Link key={index} to={link.url} className='capitalize'>{link.label}</Link></motion.span>
 
                                     ))
                                 }

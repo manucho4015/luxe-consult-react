@@ -16,10 +16,10 @@ export const navbarLinks = [
         label: 'about us',
         url: '/about-us'
     },
-    // {
-    //     label: 'contact',
-    //     url: '/contact-us'
-    // }
+    {
+        label: 'contact us',
+        url: '/contact-us'
+    }
 ]
 export const footerQuickLinks = [
     {
