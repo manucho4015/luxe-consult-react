@@ -30,16 +30,16 @@ const Banner = () => {
                     </motion.div>
                 </div>
                 {/* filter */}
-                <div className="w-[90%] lg:w-[60%] min-w-[236px] h-fit min-h-[80px] pr-[20px] pl-[40px] py-[10px] bg-white shadow flex items-center justify-between rounded-[100px] mt-[15px]">
+                <div className="w-full md:w-[90%] lg:w-[60%] min-w-[236px] h-fit min-h-[80px] pr-[20px] pl-[40px] py-[10px] bg-white shadow flex flex-wrap items-center justify-between md:rounded-[100px] mt-[15px]">
 
                     {/* location */}
-                    <div className="h-[50px] min-w-[49px] w-[15%] flex flex-col justify-between">
+                    <div className="h-[50px] min-w-[150px] md:min-w-[49px] w-[15%] mb-[25px] md:mb-0 flex flex-col justify-between">
                         <p className='text-[16px] font-medium'>Search location</p>
                         <input type="text" name="message" id="message" className=' h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[20px] text-sm text-[#797E82] outline-none focus:border-primary focus:border-b-[1.65px] ease-in-out duration-200' />
                     </div>
 
                     {/* property type */}
-                    <div className="h-[50px] min-w-[49px] w-[15%] flex flex-col justify-between">
+                    <div className="h-[50px] min-w-[150px] md:min-w-[49px] w-[15%] mb-[25px] md:mb-0 flex flex-col justify-between">
                         <p className='text-[16px] font-medium capitalize'>property type</p>
                         <div onClick={() => setShowPropertyDropdown(!showPropertyDropdown)} className=" h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[10px] text-sm text-[#797E82] flex items-center justify-between cursor-default relative">
                             <p className='capitalize'>{propertyType}</p>
@@ -63,7 +63,7 @@ const Banner = () => {
                         </div>
                     </div>
                     {/* bedrooms */}
-                    <div className="h-[50px] min-w-[49px] w-[15%] flex flex-col justify-between">
+                    <div className="h-[50px] min-w-[150px] md:min-w-[49px] w-[15%] mb-[25px] md:mb-0 flex flex-col justify-between">
                         <p className='text-[16px] font-medium capitalize'>bedrooms</p>
                         <div onClick={() => setShowBedroomsDropdown(!showBedroomsDropdown)} className=" h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[10px] text-sm text-[#797E82] flex items-center justify-between cursor-default relative">
                             <p className='capitalize'>{bedroomState}</p>
@@ -88,12 +88,12 @@ const Banner = () => {
                     </div>
 
                     {/* budget */}
-                    <div className="h-[50px] min-w-[49px] w-[15%] flex flex-col justify-between">
+                    <div className="h-[50px] min-w-[150px] md:min-w-[49px] w-[15%] mb-[25px] md:mb-0 flex flex-col justify-between">
                         <p className='text-[16px] font-medium'>Enter Budget</p>
                         <input type="text" name="message" id="message" className=' h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[20px] text-sm text-[#797E82] outline-none focus:border-primary focus:border-b-[1.65px] ease-in-out duration-200' value={budget} onChange={(e) => setBudget(`Max ${e.target.value.split(' ')[1]}`)} />
                     </div>
                     <motion.div whileTap={{ scale: .95 }}
-                        className={`h-[53px] w-[98px] text-[18px] font-medium cursor-default flex items-center justify-center bg-primary rounded-[40px]`}>
+                        className={`h-[53px] w-[80vw] md:w-[98px] text-[18px] font-medium cursor-default flex items-center justify-center bg-primary rounded-[40px]`}>
                         Search
                     </motion.div>
                 </div>
