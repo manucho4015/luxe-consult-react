@@ -3,7 +3,7 @@ import { companies } from "../../../data/home"
 const Companies = () => {
     return (
         <div className=" inline-flex w-full justify-center">
-            <div className="max-h-[314.3px] h-[40vh] w-[90vw] rounded-xl bg-black shadow flex justify-center items-center">
+            <div className="h-fit p-[20px] md:p-0 md:max-h-[314.3px] md:h-[40vh] w-[90vw] rounded-xl bg-black shadow flex justify-center items-center">
                 <div className="text-white">
                     <p className="font-medium text-center">Thousands of world’s leading companies trust Space</p>
                     {/* companies */}
