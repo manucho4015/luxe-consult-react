@@ -48,7 +48,7 @@ const Banner = () => {
                             {/* dropdown */}
                             {
                                 showPropertyDropdown && (
-                                    <div className="w-[10vw] rounded-lg bg-white shadow absolute top-[30px] left-[15px]">
+                                    <div className="w-[125px] md:w-[10vw] rounded-lg bg-white shadow absolute top-[30px] left-[15px]">
                                         <ul>
                                             {
                                                 propertyTypes.map((type, index) => (
@@ -72,7 +72,7 @@ const Banner = () => {
                             {/* dropdown */}
                             {
                                 showBedroomsDropdown && (
-                                    <div className="w-[10vw] rounded-lg bg-white shadow absolute top-[30px] left-[15px]">
+                                    <div className="w-[125px] md:w-[10vw] rounded-lg bg-white shadow absolute top-[30px] left-[15px]">
                                         <ul>
                                             {
                                                 bedrooms.map((bedroom, index) => (
