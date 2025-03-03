@@ -11,7 +11,7 @@ const Index = () => {
     const arr = Array.from(Array(6).keys())
     return (
         <>
-            <div className="relative">
+            <div className="relative mb-[250px]">
                 <div className="inline-block min-h-[40vh] bg-red-300 w-full" />
                 <ImagesGrid />
                 <Filter />
