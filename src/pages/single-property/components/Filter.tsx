@@ -32,7 +32,7 @@ const Filter = () => {
                         {/* dropdown */}
                         {
                             showPropertyDropdown && (
-                                <div className="w-[125px] md:w-[10vw] rounded-lg bg-black text-white shadow absolute top-[30px] left-[15px]">
+                                <div className="w-[125px] md:w-[10vw] rounded-lg bg-black text-white shadow absolute z-[10] top-[30px] left-[15px]">
                                     <ul>
                                         {
                                             propertyTypes.map((type, index) => (
