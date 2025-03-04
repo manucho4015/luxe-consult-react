@@ -1,15 +1,27 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
 // components
-import Property from './components/Property'
+import PropertyCard from './components/Property'
 
 // data
 import { selectToggles } from '../../../../data/home'
 
+// api
+import { fetchProperties } from '../../../../api/properties'
+
+// custom types
+import type { Property } from '../../../../custom-types/properties'
+
 const Properties = () => {
     const [isActive, setIsActive] = useState('')
-    const arr = Array.from(Array(6).keys())
+    const [properties, setProperties] = useState<Property[]>([])
+
+    useEffect(() => {
+        fetchProperties().then((response) => {
+            setProperties(response)
+        })
+    }, [])
     return (
         <div className='min-h-[50vh] inline-block w-full'>
             <h2 className="font-bold text-[40px] mt-[100px] text-center">Featured Properties</h2>
@@ -31,8 +43,8 @@ const Properties = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 px-[2.5vw] gap-10 mt-[50px]">
                 {
-                    arr.map((item) => (
-                        <Property key={item} />
+                    properties.map((property, index) => (
+                        <PropertyCard key={index} property={property} />
                     ))
                 }
             </div>
