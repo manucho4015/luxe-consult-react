@@ -99,7 +99,7 @@ const Root = () => {
                 <div className="mt-[50px] md:mt-[75px] grid grid-cols-2 md:grid-cols-9 gap-5 px-[5vw]">
                     {/* subscribe */}
                     <div className="col-span-3">
-                        <h4 className='text-[#FFFFFF75] text-[19px] mb-[20px]'>Subscribe</h4>
+                        <h4 className='text-[#FFFFFF75] text-[19px] mb-[20px]'>Newsletter</h4>
                         <div className="flex items-center">
                             <input type="text" name="message" id="message" className=' h-[38px] w-[50%] bg-transparent border-b-[1.65px] border-slate-300 px-[20px] text-sm text-[#797E82] outline-none focus:border-primary focus:border-b-[1.65px] ease-in-out duration-200 mr-[10px]' placeholder='Your Email' />
                             <motion.button whileTap={{ scale: .95 }} className='capitalize bg-[#FFFFFF14] rounded-4xl w-[117.92px] h-[42.5px] flex items-center justify-center text-[16px] text-white'>
