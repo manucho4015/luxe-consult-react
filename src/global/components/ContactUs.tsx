@@ -25,7 +25,7 @@ const ContactUs = () => {
                     border-gray-300 focus:ring-blue-500 focus:border-blue-500 focus:outline-none"
                         placeholder="Fill me..." />
                 </div>
-                <motion.button whileTap={{ scale: .95 }} className='uppercase bg-primary rounded-md w-full min-h-[50px] mt-[15px]'>
+                <motion.button whileTap={{ scale: .95 }} className='uppercase text-slate-100 bg-primary rounded-md w-full min-h-[50px] mt-[15px]'>
                     send message
                 </motion.button>
             </div>

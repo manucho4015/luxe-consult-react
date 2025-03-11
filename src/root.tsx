@@ -37,7 +37,7 @@ const Root = () => {
             <nav className="md:top-[25px] top-0 absolute inline-flex md:justify-center w-full z-[20]">
                 <motion.div className="md:h-[82.75px] w-full md:w-[90%] lg:w-[80%] md:rounded-[64px] bg-white flex flex-col md:flex-row md:items-center md:justify-between px-[10vw] md:px-[25px] md:py-0 py-[25px] shadow">
                     <div className="flex justify-between md:m-0 mb-[10px]">
-                        <img src="/luxe-consult-logo.png" alt="Logo" className="h-[50px] w-[75px] cursor-pointer"
+                        <img src="/luxe-consult-logo-nav.png" alt="Logo" className="h-[50px] w-[60px] cursor-pointer"
                             onClick={() => navigate('/')} />
                         <button onClick={() => setIsMobileNavOpen(!isMobileNavOpen)} data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden outline-none ring-2 hover:bg-gray-700 ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
                             <span className="sr-only">Open main menu</span>
@@ -84,21 +84,29 @@ const Root = () => {
             <div className='w-full bg-black py-[25px]'>
                 <div className="flex flex-wrap md:justify-between items-center px-[5vw]">
                     {/* logo */}
-                    <img src="/luxe-consult-logo.png" alt="logo white" className="max-w-[150px] max-h-[125px] h-[40vh] w-[40vh]" />
+                    <img src="/luxe-consult-logo-footer.png" alt="logo white" className="max-w-[100px] max-h-[95px] h-[35vh] w-[37.5vh]" />
                     {/* social media */}
                     <div className="max-w-[352px] max-h-[40px] h-[15vh] w-[40vh] flex items-center md:m-0 mt-[20px]">
                         <p className='text-white mr-[50px] capitalize'>follow us</p>
                         <img src="/facebook-white.svg" alt="facebook" className="h-[20px] w-[20px] md:max-w-[9.68px] md:max-h-[15px] md:h-[5vh] md:w-[4.5vh] mr-[15px]" />
                         <img src="/twitter-white.svg" alt="twitter" className=" h-[20px] w-[20px] md:max-w-[13.51px] md:max-h-[15px] md:h-[5vh] md:w-[4.75vh] mr-[15px]" />
-                        <img src="/instagram-white.svg" alt="instagram" className="h-[20px] w-[20px] md:max-w-[12.56px] md:max-h-[15px] md:h-[5vh] md:w-[4.7vh] mr-[15px]" />
-                        <img src="/linkedin-white.svg" alt="LinkedIn" className="h-[20px] w-[20px] md:max-w-[13.48px] md:max-h-[15px] md:h-[5vh] md:w-[4.77vh] mr-[15px]" />
+
+                        {/* instagram */}
+                        <a href="https://www.instagram.com/luxeconsult_ke?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+                            <img src="/instagram-white.svg" alt="instagram" className="h-[20px] w-[20px] md:max-w-[12.56px] md:max-h-[15px] md:h-[5vh] md:w-[4.7vh] mr-[15px]" />
+                        </a>
+                        <a href="https://www.tiktok.com/@luxe.consult?_t=ZM-8u0qipgX7mI&_r=1" target="_blank" rel="noopener noreferrer">
+                            <img src="/tiktok_white.png" alt="TikTok" className="h-[20px] w-[20px] md:max-w-[13.48px] md:max-h-[15px] md:h-[5vh] md:w-[4.77vh] mr-[15px]" />
+                        </a>
+
+
                     </div>
                 </div>
 
                 {/* grid */}
-                <div className="mt-[50px] md:mt-[75px] grid grid-cols-2 md:grid-cols-9 gap-5 px-[5vw]">
+                <div className="mt-[50px] md:mt-[75px] grid grid-cols-2 md:grid-cols-6 gap-5 px-[5vw]">
                     {/* subscribe */}
-                    <div className="col-span-3">
+                    {/* <div className="col-span-3">
                         <h4 className='text-[#FFFFFF75] text-[19px] mb-[20px]'>Newsletter</h4>
                         <div className="flex items-center">
                             <input type="text" name="message" id="message" className=' h-[38px] w-[50%] bg-transparent border-b-[1.65px] border-slate-300 px-[20px] text-sm text-[#797E82] outline-none focus:border-primary focus:border-b-[1.65px] ease-in-out duration-200 mr-[10px]' placeholder='Your Email' />
@@ -107,7 +115,7 @@ const Root = () => {
                             </motion.button>
                         </div>
                         <p className='mt-[15px] text-white'>Subscribe to our newsletter to receive our weekly feed.</p>
-                    </div>
+                    </div> */}
 
                     {/* discover */}
                     <div className="col-span-1">
