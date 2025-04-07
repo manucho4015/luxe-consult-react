@@ -13,7 +13,11 @@ const Banner = () => {
     const [showBedroomsDropdown, setShowBedroomsDropdown] = useState(false)
     const [budget, setBudget] = useState('Max ')
     return (
-        <div className="min-h-[100vh] bg-[url(/beautiful-architecture-building.jpg)] bg-cover bg-center bg-blend-color bg-[#00000050] relative">
+        <div className="min-h-[100vh] bg-[url(/beautiful-architecture-building.jpg)] bg-cover bg-center bg-blend-color bg-[#00000070] relative flex items-center justify-center">
+            <div className="w-[75%]">
+                <h2 className='capitalize text-primary font-semibold text-[90px] text-center'>search. see. love</h2>
+                <p className="text-white text-center text-[22px]">Our mission is to make your real estate journey seamless, personalized and enjoyable, ensuring our clients achieve their real estate goals with ease and eficiency.</p>
+            </div>
 
             <div className="absolute bottom-10 flex flex-col w-full items-center">
                 {/* Type search toggle */}

@@ -44,8 +44,24 @@ export const bathrooms = ['1 bathroom', '2 bathrooms', '3 bathrooms', '4 bathroo
 
 export const companies = [
     {
-        src: '/sojitz-logo.png',
+        src: '/sojitz.png',
         alt: 'Sojitz'
+    },
+    {
+        src: '/world-bank.png',
+        alt: 'World Bank'
+    },
+    {
+        src: '/un-migration.png',
+        alt: 'IOM'
+    },
+    {
+        src: '/unicef-logo.png',
+        alt: 'UNICEF'
+    },
+    {
+        src: '/red-cross.png',
+        alt: 'Red Cross'
     },
     {
         src: '/jetro-logo.png',
@@ -56,23 +72,8 @@ export const companies = [
         alt: 'United Nations'
     },
     {
-        src: '/world-bank-logo.png',
-        alt: 'World Bank'
-    },
-    {
-        src: '/iom-logo.png',
-        alt: 'IOM'
-    },
-    {
-        src: '/unicef-logo.png',
-        alt: 'UNICEF'
-    },
-    {
         src: '/usaid-logo.png',
         alt: 'USAID'
     },
-    {
-        src: '/red-cross-logo.jpg',
-        alt: 'Red Cross'
-    },
+
 ]

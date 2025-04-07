@@ -1,6 +1,6 @@
 export const categories = [
     {
-        title: 'Aprtment',
+        title: 'Kileleshwa',
         paragraph: '3 properties'
     },
     {
