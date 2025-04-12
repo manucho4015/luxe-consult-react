@@ -37,7 +37,7 @@ const Root = () => {
             <nav className="md:top-[25px] top-0 absolute inline-flex md:justify-center w-full z-[20]">
                 <motion.div className="md:h-[82.75px] w-full md:w-[90%] lg:w-[80%] md:rounded-[64px] bg-white flex flex-col md:flex-row md:items-center md:justify-between px-[10vw] md:px-[25px] md:py-0 py-[25px] shadow">
                     <div className="flex justify-between md:m-0 mb-[10px]">
-                        <img src="/luxe-logo-black.png" alt="Logo" className="h-[60px] w-[151px] cursor-pointer"
+                        <img src="/luxe-logo-2.png" alt="Logo" className="h-[75px] w-[125px] cursor-pointer"
                             onClick={() => navigate('/')} />
                         <button onClick={() => setIsMobileNavOpen(!isMobileNavOpen)} data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden outline-none ring-2 hover:bg-gray-700 ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
                             <span className="sr-only">Open main menu</span>
