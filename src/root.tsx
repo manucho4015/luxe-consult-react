@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Link, useNavigate } from "react-router"
 
 // data
-import { navbarLinks, footerQuickLinks } from './data/root'
+import { navbarLinks, footerQuickLinks, footerDiscoveryTowns } from './data/root'
 
 const Root = () => {
     const navigate = useNavigate()
@@ -68,8 +68,8 @@ const Root = () => {
                         )
                     }
 
-                    <div className="hidden lg:flex items-center justify-between w-[13%]">
-                        <img src="/call.svg" alt="Logo" className="h-[20px] w-[20px] " />
+                    <div className="hidden lg:flex items-center w-[15%] min-w-fit">
+                        <img src="/call.svg" alt="Logo" className="h-[20px] w-[20px] mr-[5px] " />
                         <p className="text-[16px]">+2547 68 096 084</p>
                     </div>
                     <motion.button onClick={() => navigate('/contact-us')} whileTap={{ scale: .95 }} className="hidden md:inline-block border-[1px] border-slate-400 h-[42.5px] w-[148.22px] rounded-4xl">
@@ -88,13 +88,21 @@ const Root = () => {
                     {/* social media */}
                     <div className="max-w-[352px] max-h-[40px] h-[15vh] w-[40vh] flex items-center md:m-0 mt-[20px]">
                         <p className='text-white mr-[50px] capitalize'>follow us</p>
-                        <img src="/facebook-white.svg" alt="facebook" className="h-[20px] w-[20px] md:max-w-[9.68px] md:max-h-[15px] md:h-[5vh] md:w-[4.5vh] mr-[15px]" />
-                        <img src="/twitter-white.svg" alt="twitter" className=" h-[20px] w-[20px] md:max-w-[13.51px] md:max-h-[15px] md:h-[5vh] md:w-[4.75vh] mr-[15px]" />
+                        {/* Facebook */}
+                        <a href="https://www.facebook.com/share/16G8qa8oxD/" target="_blank" rel="noopener noreferrer">
+                            <img src="/facebook-white.svg" alt="facebook" className="h-[20px] w-[20px] md:max-w-[9.68px] md:max-h-[15px] md:h-[5vh] md:w-[4.5vh] mr-[15px]" />
+                        </a>
+                        {/* Twitter */}
+                        <a href="https://x.com/LuxeConsult?t=GjE4pvoY3ndYuoBx5DCneQ&s=09" target="_blank" rel="noopener noreferrer">
+                            <img src="/twitter-white.svg" alt="twitter" className="h-[20px] w-[20px] md:max-w-[13.51px] md:max-h-[15px] md:h-[5vh] md:w-[4.75vh] mr-[15px]" />
+                        </a>
 
                         {/* instagram */}
                         <a href="https://www.instagram.com/luxeconsult_ke?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
                             <img src="/instagram-white.svg" alt="instagram" className="h-[20px] w-[20px] md:max-w-[12.56px] md:max-h-[15px] md:h-[5vh] md:w-[4.7vh] mr-[15px]" />
                         </a>
+
+                        {/* Tiktok */}
                         <a href="https://www.tiktok.com/@luxe.consult?_t=ZM-8u0qipgX7mI&_r=1" target="_blank" rel="noopener noreferrer">
                             <img src="/tiktok_white.png" alt="TikTok" className="h-[20px] w-[20px] md:max-w-[13.48px] md:max-h-[15px] md:h-[5vh] md:w-[4.77vh] mr-[15px]" />
                         </a>
@@ -121,12 +129,11 @@ const Root = () => {
                     <div className="col-span-1">
                         <h4 className='text-[#FFFFFF75] text-[19px] mb-[20px]'>Discover</h4>
                         <ul className='text-white'>
-                            <li className='mb-[15px]'>Nairobi</li>
-                            <li className='mb-[15px]'>Eldoret</li>
-                            <li className='mb-[15px]'>Kisumu</li>
-                            <li className='mb-[15px]'>Mombasa</li>
-                            <li className='mb-[15px]'>Kiambu</li>
-                            <li className='mb-[15px]'>Nyahururu</li>
+                            {
+                                footerDiscoveryTowns.map((town, index) => (
+                                    <li key={index} className='mb-[15px]'>{town}</li>
+                                ))
+                            }
                         </ul>
                     </div>
 

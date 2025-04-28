@@ -47,3 +47,5 @@ export const footerQuickLinks = [
         url: '/'
     },
 ]
+
+export const footerDiscoveryTowns = ['Kileleshwa', 'Kilimani', 'Lavington', 'Karen', 'Westlands']

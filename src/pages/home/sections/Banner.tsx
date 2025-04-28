@@ -7,7 +7,7 @@ import { propertyTypes, bedrooms } from '../../../data/home'
 
 const Banner = () => {
     const [isActive, setIsActive] = useState('buy')
-    const [propertyType, setPropertyType] = useState('bungalow')
+    const [propertyType, setPropertyType] = useState('plots')
     const [showPropertyDropdown, setShowPropertyDropdown] = useState(false)
     const [bedroomState, setBedroomState] = useState('1 bedroom')
     const [showBedroomsDropdown, setShowBedroomsDropdown] = useState(false)
