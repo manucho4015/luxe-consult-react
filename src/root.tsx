@@ -35,7 +35,7 @@ const Root = () => {
         <div className='relative'>
             {/* Navbar (Medium screens and bigger) */}
             <nav className="md:top-[25px] top-0 absolute inline-flex md:justify-center w-full z-[20]">
-                <motion.div className="md:h-[82.75px] w-full md:w-[90%] lg:w-[80%] md:rounded-[64px] bg-white flex flex-col md:flex-row md:items-center md:justify-between px-[10vw] md:px-[25px] md:py-0 py-[25px] shadow">
+                <motion.div className="md:h-[82.75px] w-full md:w-[90%] lg:w-[80%] md:rounded-[64px] bg-white flex flex-col md:flex-row md:items-center md:justify-between px-[10vw] md:px-[25px] md:py-0 py-[15px] shadow">
                     <div className="flex items-center justify-between md:m-0 mb-[10px]">
                         <img src="/luxe-logo-2.png" alt="Logo" className="h-[75px] w-[125px] cursor-pointer"
                             onClick={() => navigate('/')} />
