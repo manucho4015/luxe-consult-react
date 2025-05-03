@@ -22,7 +22,7 @@ jobs:
         id: cache-node-modules
         with:
           path: '**/node_modules'
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json', '**/package.json') }}
       - name: 🔨 Install Dependencies
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: |
@@ -32,8 +32,9 @@ jobs:
          CI: false
       - name: 🏗 Build Project
         run: npm run build
+        continue-on-error: false
       - name: 📂 Sync folders and files to the server
-        uses: manucho4015/FTP-Deploy-Action@v1.1.1
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
