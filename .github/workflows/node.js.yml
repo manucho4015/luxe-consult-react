@@ -40,4 +40,6 @@ jobs:
           user: ${{ secrets.FTP_USERNAME }}
           pass: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
-          local-dir: dist/
+          localDir: dist/
+          remoteDir: '.'
+          reverse: true
