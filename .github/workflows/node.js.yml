@@ -33,7 +33,7 @@ jobs:
       - name: 🏗 Build Project
         run: npm run build
       - name: 📂 Sync folders and files to the server
-        uses: Luxe Consult Site Build@v1.1.1
+        uses: manucho4015/FTP-Deploy-Action@v1.1.1
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
