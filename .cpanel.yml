@@ -3,8 +3,9 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/cogiwggd/public_html/
     - export NODE_ENV=production
-    - source ~/.bashrc
-    - cd $DEPLOYMENT_SOURCE
+    - export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    - nvm install 20
+    - nvm use 20
     - npm install
     - npm run build
     - rm -rf $DEPLOYPATH/*
