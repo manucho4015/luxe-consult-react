@@ -3,10 +3,5 @@ deployment:
   tasks:
     - export DEPLOYMENT_TARGET=/home/cogiwggd/public_html
     - export DEPLOYMENT_SOURCE=/home/cogiwggd/repositories/luxe-consult-react
-    - export NODE_ENV=production
-    - source ~/.bashrc
-    - cd $DEPLOYMENT_SOURCE
-    - npm install
-    - npm run build
     - rm -rf $DEPLOYMENT_TARGET/*
     - cp -r dist/* $DEPLOYMENT_TARGET/
