@@ -9,4 +9,4 @@ deployment:
     - npm install
     - npm run build
     - rm -rf $DEPLOYPATH/*
-    - cp -r dist/* $DEPLOYPATH/
+    - cp -r dist/* $DEPLOYPATH/*
