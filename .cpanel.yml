@@ -1,15 +1,12 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/cogiwggd/public_html/
+    - export DEPLOYMENT_TARGET=/home/cogiwggd/public_html
     - export DEPLOYMENT_SOURCE=/home/cogiwggd/repositories/luxe-consult-react
     - export NODE_ENV=production
-    - export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
     - source ~/.bashrc
-    - nvm install 20
-    - nvm use 20
     - cd $DEPLOYMENT_SOURCE
     - npm install
     - npm run build
-    - rm -rf $DEPLOYPATH/*
-    - cp -r dist/* $DEPLOYPATH/
+    - rm -rf $DEPLOYMENT_TARGET/*
+    - cp -r dist/* $DEPLOYMENT_TARGET/
