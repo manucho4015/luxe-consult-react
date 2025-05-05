@@ -2,5 +2,10 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/cogiwggd/public_html/
-    - /bin/rm -rf $DEPLOYPATH*
-    - /bin/cp -r build/* $DEPLOYPATH
+    - export NODE_ENV=production
+    - source ~/.bashrc
+    - cd $DEPLOYMENT_SOURCE
+    - npm install
+    - npm run build
+    - rm -rf $DEPLOYPATH/*
+    - cp -r build/* $DEPLOYPATH/
