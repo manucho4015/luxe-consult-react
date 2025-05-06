@@ -16,9 +16,9 @@ const Property = ({ property }: { property: Property }) => {
         return str.join('.');
     }
     return (
-        <div className='bg-[#1F4B3F05] inline-block rounded-2xl p-[15px] w-full md:max-w-[465px] max-h-[520.67px] md:w-[30vw] h-[75vh] shadow'>
+        <div className='bg-[#1F4B3F05] inline-block rounded-2xl p-[15px] w-full md:max-w-[465px] max-h-[520.67px] md:w-[30vw] shadow'>
             {/* image */}
-            <Link to={`/property-search/1`}>
+            <Link to={`/property/${property.id}`}>
                 <div className="bg-red-200 rounded-2xl p-[10px]  max-h-[296.27px] w-full h-[55vh]">
                     <div className="flex">
                         <div
@@ -33,7 +33,7 @@ const Property = ({ property }: { property: Property }) => {
                 </div>
             </Link>
             <div className="inline-flex mt-[45px] justify-between items-center w-full">
-                <p className="text-[19px] capitalize">{property.property_type}</p>
+                <p className="text-[19px] capitalize">{property.title}</p>
                 <p className="text-[21px] font-medium text-primary">Ksh. {commafy(parseInt(property.price))}</p>
             </div>
 

@@ -17,3 +17,16 @@ export const fetchProperties = async () => {
         throw new Error(axios_error_message(error));
     }
 }
+export const fetchProperty = async (id: string) => {
+    try {
+        const response = await http_client().get(`api/properties/${id}/`);
+
+        const json: Property = await response.data;
+        // console.log(json)
+        return json
+    } catch (error) {
+        console.error(error);
+
+        throw new Error(axios_error_message(error));
+    }
+}

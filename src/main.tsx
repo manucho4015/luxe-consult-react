@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         element: <PropertySearch />,
       },
       {
-        path: "/property-search/:propertyId",
+        path: "/property/:propertyId",
         element: <SingleProperty />,
       },
       {

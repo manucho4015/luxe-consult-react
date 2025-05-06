@@ -19,7 +19,7 @@ const Properties = () => {
 
     useEffect(() => {
         fetchProperties().then((response) => {
-            setProperties(response)
+            setProperties(response.slice(0, 6))
         })
     }, [])
     return (
@@ -32,7 +32,7 @@ const Properties = () => {
                     {
                         selectToggles.map((toggle) => (
                             <motion.div animate={{ backgroundColor: isActive == toggle.value ? '#000' : '#E9E9E9', color: isActive == toggle.value ? '#fff' : '#000' }}
-                                className={`min-h-[53px] min-w-[141px] px-[15px] mr-[10px] mb-[10px] lg:m-0 cursor-default text-[18px] flex items-center justify-center  rounded-xl capitalize `}
+                                className={`min-h-[53px] min-w-[141px] px-[15px] mr-[10px] mb-[10px] lg:mr-0 cursor-default text-[18px] flex items-center justify-center  rounded-xl capitalize `}
                                 onClick={() => setIsActive(toggle.value)}>
                                 {toggle.label}
                             </motion.div>
