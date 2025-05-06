@@ -3,8 +3,12 @@ import { Outlet } from 'react-router'
 import { motion } from 'framer-motion'
 import { Link, useNavigate } from "react-router"
 
+// scroll to top
+import ScrollToTop from './scrollToTop'
+
 // data
 import { navbarLinks, footerQuickLinks, footerDiscoveryTowns } from './data/root'
+
 
 const Root = () => {
     const navigate = useNavigate()
@@ -79,6 +83,7 @@ const Root = () => {
             </nav>
 
             <Outlet />
+            <ScrollToTop />
 
             {/* Footer */}
             <div className='w-full bg-black py-[25px]'>
