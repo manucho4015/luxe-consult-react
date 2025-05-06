@@ -39,7 +39,7 @@ const Description = ({ propertyId }: { propertyId: string | undefined }) => {
 
                 {/* pricing */}
                 <h5 className='capitalize font-medium text-[25px] mt-[50px]'>More Information</h5>
-                <div className="flex mt-[10px]">
+                <div className="flex flex-wrap mt-[10px]">
                     <div className="mr-[10px] col-span-1 font-light">
                         Property type - <span className="font-medium capitalize">{property?.property_type}</span>
                     </div>

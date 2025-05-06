@@ -13,7 +13,7 @@ const Filter = () => {
     const [showBathroomsDropdown, setShowBathroomsDropdown] = useState(false)
 
     return (
-        <div className="absolute -bottom-[300px] md:-bottom-10 flex flex-col w-full items-center">
+        <div className="md:absolute md:-bottom-10 flex flex-col w-full items-center">
             <div className="w-full h-fit md:w-[85%] md:min-w-[236px] md:h-[80px] pl-[40px] pr-[15px] py-[10px] md:px-[40px] bg-[#00000095] text-white shadow flex flex-wrap items-center justify-between md:rounded-[100px] mt-[15px]">
 
                 {/* location */}

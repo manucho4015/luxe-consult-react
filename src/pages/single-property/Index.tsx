@@ -24,8 +24,8 @@ const Index = () => {
     }, [propertyId])
     return (
         <>
-            <div className="relative mb-[100px]">
-                <div className="inline-block min-h-[40vh] bg-red-300 w-full" />
+            <div className="relative mb-[25px] md:mb-[100px] h-fit">
+                <div className="inline-block min-h-[40vh] bg-[url(/modern-residential-building.jpg)] bg-[#0000007e] bg-center bg-cover bg-blend-overlay w-full" />
                 <ImagesGrid />
                 <Filter />
             </div>
