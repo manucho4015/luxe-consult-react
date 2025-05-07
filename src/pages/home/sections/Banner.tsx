@@ -103,7 +103,7 @@ const Banner = () => {
                     {/* budget */}
                     <div className="h-[50px] min-w-[150px] md:min-w-[49px] w-[15%] mb-[25px] md:mb-0 flex flex-col justify-between">
                         <p className='text-[16px] font-medium'>Enter Budget</p>
-                        <input type="text" name="message" id="message" className=' h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[20px] text-sm text-[#797E82] outline-none focus:border-primary focus:border-b-[1.65px] ease-in-out duration-200' value={budget} onChange={(e) => setBudget(`Max ${e.target.value.split(' ')[1]}`)} />
+                        <input type="text" name="message" id="message" className=' h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[20px] text-sm text-[#797E82] outline-none focus:border-primary focus:border-b-[1.65px] ease-in-out duration-200' value={budget} onChange={(e) => e.target.value !== 'Max' && setBudget(`Max ${e.target.value.split(' ')[1]}`)} />
                     </div>
                     <motion.div whileTap={{ scale: .95 }} onClick={handleSearch}
                         className={`h-[53px] w-[80vw] md:w-[98px] text-[18px] font-medium cursor-default flex items-center justify-center bg-primary rounded-[40px]`}>

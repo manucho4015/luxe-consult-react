@@ -33,7 +33,7 @@ const Property = ({ property }: { property: Property }) => {
                 </div>
             </Link>
             <div className="inline-flex mt-[45px] justify-between items-center w-full">
-                <p className="text-[19px] capitalize">{property.title}</p>
+                <p className="text-[19px] capitalize">{property.title.length > 25 ? `${property.title.slice(0, 25)}...` : property.title}</p>
                 <p className="text-[21px] font-medium text-primary">Ksh. {commafy(parseInt(property.price))}</p>
             </div>
 
@@ -60,7 +60,7 @@ const Property = ({ property }: { property: Property }) => {
             </div>
             <div className="inline-flex justify-end mt-[10px] items-center w-full">
                 <p className="mr-[3px]">Listed:</p>
-                <p className="italic font-light text-[14px]">12/01/2025</p>
+                <p className="italic font-light text-[14px]">{new Date(property.listed_date).toDateString()}</p>
             </div>
         </div>
     )

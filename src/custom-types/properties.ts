@@ -11,5 +11,6 @@ export type Property = {
     status_display: string,
     category: string,
     agent: string,
+    listed_date: string,
     amenities: string[]
 }
