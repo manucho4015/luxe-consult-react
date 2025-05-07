@@ -16,7 +16,7 @@ const Property = ({ property }: { property: Property }) => {
         return str.join('.');
     }
     return (
-        <div className='bg-[#1F4B3F05] inline-block rounded-2xl p-[15px] w-full md:max-w-[465px] max-h-[520.67px] md:w-[30vw] shadow'>
+        <div className='bg-[#1F4B3F05] inline-block rounded-2xl p-[15px] w-full md:max-w-[465px] md:w-[30vw] shadow'>
             {/* image */}
             <Link to={`/property/${property.id}`}>
                 <div className="bg-red-200 rounded-2xl p-[10px]  max-h-[296.27px] w-full h-[55vh]">

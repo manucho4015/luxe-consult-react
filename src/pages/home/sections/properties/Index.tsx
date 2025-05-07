@@ -41,7 +41,7 @@ const Properties = () => {
                 </div>
 
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 px-[2.5vw] gap-10 mt-[50px]">
+            <div className="grid grid-cols-1 md:grid-cols-3 px-[5vw] md:px-[2.5vw] gap-10 mt-[50px]">
                 {
                     properties.map((property, index) => (
                         <PropertyCard key={index} property={property} />
