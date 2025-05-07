@@ -1,16 +1,25 @@
 import { useState } from 'react'
 import { motion } from "framer-motion"
+import { useNavigate } from 'react-router'
 
 // data
 import { propertyTypes, bedrooms, bathrooms } from '../../../data/home'
 
 const Filter = () => {
-    const [propertyType, setPropertyType] = useState('bungalow')
+    const navigate = useNavigate()
+
+    const [searchLocation, setSearchLocation] = useState('')
+    const [propertyType, setPropertyType] = useState('apartment')
     const [showPropertyDropdown, setShowPropertyDropdown] = useState(false)
     const [bedroomState, setBedroomState] = useState('1 bedroom')
     const [showBedroomsDropdown, setShowBedroomsDropdown] = useState(false)
     const [bathroomState, setBathroomState] = useState('1 barthroom')
     const [showBathroomsDropdown, setShowBathroomsDropdown] = useState(false)
+
+    const handleSearch = () => {
+        const searchUrl = `/property-search?location=${searchLocation}&type=${propertyType}&bedrooms=${bedroomState.split(' ')[0]}`
+        navigate(searchUrl)
+    }
 
     return (
         <div className="md:absolute md:-bottom-10 flex flex-col w-full items-center">
@@ -19,7 +28,7 @@ const Filter = () => {
                 {/* location */}
                 <div className="h-[50px] min-w-[150px] md:min-w-[49px] w-[10%] mb-[25px] md:mb-0 flex flex-col justify-between">
                     <p className='text-[16px] font-medium'>Search location</p>
-                    <input type="text" name="message" id="message" className=' h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[20px] text-sm outline-none focus:border-primary focus:border-b-[1.65px] ease-in-out duration-200' />
+                    <input type="text" name="message" id="message" className=' h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[20px] text-sm outline-none focus:border-primary focus:border-b-[1.65px] ease-in-out duration-200' value={searchLocation} onChange={(e) => setSearchLocation(e.target.value)} />
                 </div>
 
                 {/* property type */}
@@ -110,7 +119,7 @@ const Filter = () => {
                     <p className='text-[16px] font-medium'>Sqft</p>
                     <input type="text" name="message" id="message" className=' h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[20px] text-sm text-[#797E82] outline-none focus:border-primary focus:border-b-[1.65px] ease-in-out duration-200' />
                 </div>
-                <motion.div whileTap={{ scale: .95 }}
+                <motion.div whileTap={{ scale: .95 }} onClick={handleSearch}
                     className={`h-[53px] w-[80vw] md:w-[98px] text-[18px] font-medium cursor-default flex items-center justify-center bg-primary rounded-[40px]`}>
                     Search
                 </motion.div>

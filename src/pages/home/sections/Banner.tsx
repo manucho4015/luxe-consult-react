@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router'
 
 import { motion } from "framer-motion"
 
@@ -6,12 +7,20 @@ import { motion } from "framer-motion"
 import { propertyTypes, bedrooms } from '../../../data/home'
 
 const Banner = () => {
+    const navigate = useNavigate()
+
+    const [searchLocation, setSearchLocation] = useState('')
     const [isActive, setIsActive] = useState('buy')
-    const [propertyType, setPropertyType] = useState('plots')
+    const [propertyType, setPropertyType] = useState('apartment')
     const [showPropertyDropdown, setShowPropertyDropdown] = useState(false)
     const [bedroomState, setBedroomState] = useState('1 bedroom')
     const [showBedroomsDropdown, setShowBedroomsDropdown] = useState(false)
     const [budget, setBudget] = useState('Max ')
+
+    const handleSearch = () => {
+        const searchUrl = `/property-search?status=${isActive}&location=${searchLocation}&type=${propertyType}&bedrooms=${bedroomState.split(' ')[0]}`
+        navigate(searchUrl)
+    }
     return (
         <div className="min-h-[100vh] bg-[url(/beautiful-architecture-building.jpg)] bg-cover bg-center bg-blend-color bg-[#00000070] relative flex items-center justify-center">
             <div className="w-[75%] md:block md:absolute bottom-[250px]">
@@ -22,12 +31,12 @@ const Banner = () => {
             <div className="absolute bottom-0 md:bottom-10 flex flex-col w-full items-center">
                 {/* Type search toggle */}
                 <div className="w-[236px] h-[73px] bg-white shadow flex items-center justify-center rounded-[40px] ">
-                    <motion.div animate={{ backgroundColor: isActive == 'buy' ? '#E5AC74' : '#fff' }}
+                    <motion.div initial={{ backgroundColor: '#E5AC74' }} animate={{ backgroundColor: isActive == 'buy' ? '#E5AC74' : '#fff' }}
                         className={`h-[53px] w-[98px] text-[18px] cursor-default flex items-center justify-center rounded-[40px]`}
                         onClick={() => setIsActive('buy')}>
                         Buy
                     </motion.div>
-                    <motion.div animate={{ backgroundColor: isActive == 'rent' ? '#E5AC74' : '#fff' }}
+                    <motion.div initial={{ backgroundColor: '#fff' }} animate={{ backgroundColor: isActive == 'rent' ? '#E5AC74' : '#fff' }}
                         className={`h-[53px] w-[98px] cursor-default text-[18px] flex items-center justify-center  rounded-[40px]`}
                         onClick={() => setIsActive('rent')}>
                         Rent
@@ -39,7 +48,7 @@ const Banner = () => {
                     {/* location */}
                     <div className="h-[50px] min-w-[150px] md:min-w-[49px] w-[15%] mb-[25px] md:mb-0 flex flex-col justify-between">
                         <p className='text-[16px] font-medium'>Search location</p>
-                        <input type="text" name="message" id="message" className=' h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[20px] text-sm text-[#797E82] outline-none focus:border-primary focus:border-b-[1.65px] ease-in-out duration-200' />
+                        <input type="text" name="search-location" id="search-location" className=' h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[20px] text-sm text-[#797E82] outline-none focus:border-primary focus:border-b-[1.65px] ease-in-out duration-200' value={searchLocation} onChange={(e) => setSearchLocation(e.target.value)} />
                     </div>
 
                     {/* property type */}
@@ -96,7 +105,7 @@ const Banner = () => {
                         <p className='text-[16px] font-medium'>Enter Budget</p>
                         <input type="text" name="message" id="message" className=' h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[20px] text-sm text-[#797E82] outline-none focus:border-primary focus:border-b-[1.65px] ease-in-out duration-200' value={budget} onChange={(e) => setBudget(`Max ${e.target.value.split(' ')[1]}`)} />
                     </div>
-                    <motion.div whileTap={{ scale: .95 }}
+                    <motion.div whileTap={{ scale: .95 }} onClick={handleSearch}
                         className={`h-[53px] w-[80vw] md:w-[98px] text-[18px] font-medium cursor-default flex items-center justify-center bg-primary rounded-[40px]`}>
                         Search
                     </motion.div>

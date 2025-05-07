@@ -3,7 +3,7 @@ import { useParams } from "react-router"
 
 // components
 import ImagesGrid from "./components/ImagesGrid"
-import Filter from "./components/Filter"
+// import Filter from "./components/Filter"
 import Description from "./components/Description"
 import PropertyCard from "../../global/components/Property"
 import ContactUs from "../../global/components/ContactUs"
@@ -27,7 +27,8 @@ const Index = () => {
             <div className="relative mb-[25px] md:mb-[100px] h-fit">
                 <div className="inline-block min-h-[40vh] bg-[url(/modern-residential-building.jpg)] bg-[#0000007e] bg-center bg-cover bg-blend-overlay w-full" />
                 <ImagesGrid />
-                <Filter />
+                {/* remove filter for this version of the app */}
+                {/* <Filter /> */}
             </div>
             <Description propertyId={propertyId} />
             <h4 className="font-medium mt-[50px] text-[30px] px-[2.5vw]">Similar Listings</h4>
