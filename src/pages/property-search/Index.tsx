@@ -13,7 +13,7 @@ import { fetchProperties } from '../../api/properties'
 import type { Property } from '../../custom-types/properties'
 
 const Index = () => {
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
     const [properties, setProperties] = useState<Property[]>([])
 
     // Get a query parameter
