@@ -1,3 +1,9 @@
+export type PropertyImage = {
+    id: number,
+    property: string,
+    image: string
+}
+
 export type Property = {
     id: string,
     title: string,
@@ -12,5 +18,6 @@ export type Property = {
     category: string,
     agent: string,
     listed_date: string,
-    amenities: string[]
+    amenities: string[],
+    images: PropertyImage[]
 }
