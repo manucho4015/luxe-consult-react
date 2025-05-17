@@ -1,16 +1,8 @@
-import { useState, useEffect } from "react"
-
-
-
-// api
-import { fetchProperty } from '../../../api/properties'
 
 // custom types
 import type { Property } from '../../../custom-types/properties'
 
-const Description = ({ propertyId }: { propertyId: string | undefined }) => {
-
-    const [property, setProperty] = useState<Property>()
+const Description = ({ property }: { property: Property | null }) => {
 
     function commafy(num: number) {
         var str = num.toString().split('.');
@@ -23,13 +15,6 @@ const Description = ({ propertyId }: { propertyId: string | undefined }) => {
         return str.join('.');
     }
 
-    useEffect(() => {
-        if (propertyId) {
-            fetchProperty(propertyId).then((response) => {
-                setProperty(response)
-            })
-        }
-    }, [propertyId])
     return (
         <div className='mt-[50px] inline-flex w-full justify-center'>
             <div className="rounded-lg shadow-md p-[30px] w-[90vw]">
