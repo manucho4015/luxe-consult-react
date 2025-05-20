@@ -30,10 +30,10 @@ export const footerQuickLinks = [
         label: 'contact',
         url: '/contact-us'
     },
-    {
-        label: 'leadership',
-        url: '/meet-the-team'
-    },
+    // {
+    //     label: 'leadership',
+    //     url: '/meet-the-team'
+    // },
     {
         label: 'blogs',
         url: '/blogs'
