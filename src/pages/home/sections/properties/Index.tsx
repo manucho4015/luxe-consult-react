@@ -19,7 +19,7 @@ const Properties = () => {
 
     useEffect(() => {
         fetchProperties().then((response) => {
-            setProperties(response.slice(0, 6))
+            setProperties(response.filter((property) => property.category.toUpperCase() === 'FEATURED').slice(0, 6))
         })
     }, [])
     return (
