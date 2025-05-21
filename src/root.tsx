@@ -37,6 +37,7 @@ const Root = () => {
     };
     return (
         <div className='relative'>
+
             {/* Navbar (Medium screens and bigger) */}
             <nav className="md:top-[25px] top-0 absolute inline-flex md:justify-center w-full z-[20]">
                 <motion.div className="md:h-[82.75px] w-full md:w-[90%] lg:w-[80%] md:rounded-[64px] bg-white flex flex-col md:flex-row md:items-center md:justify-between px-[10vw] md:px-[25px] md:py-0 py-[15px] shadow">
@@ -81,6 +82,12 @@ const Root = () => {
                     </motion.button>
                 </motion.div>
             </nav>
+
+            {/* Whatsapp Integration */}
+            <a href="https://wa.me/message/HRKPX6SM6FPPK1" target='_blank'>
+                <motion.img drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} dragTransition={{ bounceStiffness: 250, bounceDamping: 10 }} dragElastic={0.5} whileDrag={{ cursor: "grabbing" }}
+                    src="/whatsapp-logo.png" alt="whatsapp" className='fixed top-[90vh] left-[90vw] inline-block h-[50px] w-[50px] z-[20]' />
+            </a>
 
             <Outlet />
             <ScrollToTop />
