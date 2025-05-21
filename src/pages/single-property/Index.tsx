@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from "react-router"
 
 // components
-import ImagesGrid from "./components/ImagesGrid"
+import ImageCarousel from "./components/ImageCarousel"
 // import Filter from "./components/Filter"
 import Description from "./components/Description"
 import PropertyCard from "../../global/components/Property"
@@ -14,12 +14,17 @@ import { fetchProperties, fetchProperty } from '../../api/properties'
 // custom types
 import type { Property } from '../../custom-types/properties'
 
+// data
+
 const Index = () => {
     const { propertyId } = useParams()
     const [properties, setProperties] = useState<Property[]>([])
     const [property, setProperty] = useState<Property | null>(null)
 
+    const tempImages = ['/property-img-1.jpg', '/property-img-2.jpg', '/aerial-view-apartment-buildings.jpg']
 
+
+    console.log(property?.images.map((propImg) => propImg.image))
     useEffect(() => {
         fetchProperties().then((response) => {
             setProperties(response.filter((prop) => prop.id !== propertyId))
@@ -33,8 +38,10 @@ const Index = () => {
     return (
         <>
             <div className="relative mb-[25px] md:mb-[100px] h-fit">
-                <div className="inline-block min-h-[40vh] bg-[url(/modern-residential-building.jpg)] bg-[#0000007e] bg-center bg-cover bg-blend-overlay w-full" />
-                <ImagesGrid images={property?.images} />
+                <div className="hidden md:inline-block min-h-[40vh] bg-[url(/modern-residential-building.jpg)] bg-[#0000007e] bg-center bg-cover bg-blend-overlay w-full" />
+                <div className="md:mt-[50px]">
+                    <ImageCarousel images={property?.images.map((propImg) => propImg.image) as unknown as string[] || tempImages} />
+                </div>
                 {/* remove filter for this version of the app */}
                 {/* <Filter /> */}
             </div>
