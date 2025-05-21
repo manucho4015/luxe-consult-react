@@ -16,7 +16,7 @@ const ContactUs = () => {
         message: ''
     })
 
-    const sendInquiry = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const sendInquiry = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         toast.promise(createInquiry(inquiry), {
             pending: `Sending inquiry...`,
@@ -42,7 +42,7 @@ const ContactUs = () => {
         <div className='inline-flex md:flex-row flex-col w-full min-h-[100vh] justify-between items-center px-[7.5vw] 
             bg-linear-to-b from-[#EEC7A2] to-[#32260480] md:py-0 py-[20px]'>
             <div className="inline-block bg-[url(/customer-service-representative.jpg)] bg-center bg-cover lg:max-w-[777px] lg:max-h-[842px] lg:h-[80vh] lg:w-[90vh] md:w-[40vh] md:h-[30vh] w-[40vh] h-[30vh] rounded-4xl border-[1.5px] border-white" />
-            <form className="w-full md:w-[40vw] max-w-[572px]">
+            <form onSubmit={(e) => sendInquiry(e)} className="w-full md:w-[40vw] max-w-[572px]">
                 <h5 className="text-[#585858]">Fill out this form and our agents will contact you shortly for detailed consultation.</h5>
                 <div className="mt-[25px]">
                     <label htmlFor="title" className="block font-semibold mb-2 text-sm  text-gray-900 ">Title</label>
@@ -62,7 +62,7 @@ const ContactUs = () => {
                     border-gray-300 focus:ring-blue-500 focus:border-blue-500 focus:outline-none"
                         placeholder="Fill me..." required value={inquiry.message} onChange={(e) => setInquiry({ ...inquiry, message: e.target.value })} />
                 </div>
-                <motion.button type='submit' whileTap={{ scale: .95 }} onClick={(e) => sendInquiry(e)} className='uppercase text-slate-100 bg-primary rounded-md w-full min-h-[50px] mt-[15px]'>
+                <motion.button type='submit' whileTap={{ scale: .95 }} className='uppercase text-slate-100 bg-primary rounded-md w-full min-h-[50px] mt-[15px]'>
                     send message
                 </motion.button>
             </form>
