@@ -86,7 +86,7 @@ const Root = () => {
             {/* Whatsapp Integration */}
             <a href="https://wa.me/message/HRKPX6SM6FPPK1" target='_blank'>
                 <motion.img drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} dragTransition={{ bounceStiffness: 250, bounceDamping: 10 }} dragElastic={0.5} whileDrag={{ cursor: "grabbing" }}
-                    src="/whatsapp-logo.png" alt="whatsapp" className='fixed top-[90vh] left-[90vw] inline-block h-[50px] w-[50px] z-[20]' />
+                    src="/whatsapp-logo.png" alt="whatsapp" className='fixed bottom-[5vh] right-[5vw] md:bottom-[5vh] md:right-[5vw] inline-block h-305px] md:h-[50px] w-[30px] md:w-[50px] z-[20]' />
             </a>
 
             <Outlet />
