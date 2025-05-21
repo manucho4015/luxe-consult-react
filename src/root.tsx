@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Outlet } from 'react-router'
 import { motion } from 'framer-motion'
 import { Link, useNavigate } from "react-router"
+import { ToastContainer } from "react-toastify";
 
 // scroll to top
 import ScrollToTop from './scrollToTop'
@@ -37,6 +38,7 @@ const Root = () => {
     };
     return (
         <div className='relative'>
+            <ToastContainer />
 
             {/* Navbar (Medium screens and bigger) */}
             <nav className="md:top-[25px] top-0 absolute inline-flex md:justify-center w-full z-[20]">
