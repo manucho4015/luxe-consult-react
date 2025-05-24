@@ -25,8 +25,8 @@ const ContactUs = () => {
             {
                 subject: inquiry.title,
                 to_name: 'Luxe Consult',
-                from_email: 'Gb@luxe-consult.com',
-                to_email: inquiry.email,
+                from_email: inquiry.email,
+                to_email: 'Gb@luxe-consult.com',
                 message: inquiry.message,
             },
             'kPqHbsCejWz3Zg4A8'
