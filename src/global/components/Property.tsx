@@ -55,10 +55,12 @@ const Property = ({ property }: { property: Property }) => {
                 </div>
             </div>
             <div className="inline-flex justify-between mt-[15px] h-[60px] items-center w-full">
-                <motion.button whileTap={{ scale: .95 }} className="flex w-[30%] h-full items-center justify-center border-[1px] border-[#1F4B43] rounded-2xl">
-                    <img src="/email-outline.svg" alt="call" className=" max-w-[16.67px] max-h-[13.33px] h-[5vh] w-[4.5vh] mr-[15px]" />
-                    <p className="capitalize text-[15px] text-[#1F4B43]">email</p>
-                </motion.button>
+                <a href="http://wa.me/message/HRKPX6SM6FPPK1" target="_blank" rel="noopener noreferrer">
+                    <motion.button whileTap={{ scale: .95 }} className="flex w-[30%] h-full items-center justify-center border-[1px] border-[#1F4B43] rounded-2xl">
+                        <img src="/iconoir--whatsapp.svg" alt="call" className=" max-w-[16.67px] max-h-[13.33px] h-[5vh] w-[4.5vh] mr-[15px]" />
+                        <p className="capitalize text-[15px] text-[#1F4B43]">whatsapp</p>
+                    </motion.button>
+                </a>
                 <motion.button whileTap={{ scale: .95 }} className="flex w-[30%] h-full items-center justify-center border-[1px] border-[#1F4B43] rounded-2xl">
                     <img src="/call-outline.svg" alt="call" className=" max-w-[16.67px] max-h-[13.33px] h-[5vh] w-[4.5vh] mr-[15px]" />
                     <p className="capitalize text-[15px] text-[#1F4B43]">call</p>
