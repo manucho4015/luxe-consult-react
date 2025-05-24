@@ -1,4 +1,3 @@
-import { motion } from "framer-motion"
 import { Link } from "react-router"
 
 // custom types
@@ -66,8 +65,6 @@ const Property = ({ property }: { property: Property }) => {
                 <a href="tel:+254768096084" className="flex h-full min-w-[25%] items-center justify-center border-[1px] border-[#1F4B43] rounded-2xl px-[10px]">
                     <img src="/call-outline.svg" alt="call" className=" mr-[10px]" />
                     <p className="capitalize text-[15px] text-[#1F4B43]">call</p>
-                    <motion.button whileTap={{ scale: .95 }} >
-                    </motion.button>
                 </a>
             </div>
             <div className="inline-flex justify-end mt-[15px] items-center w-full">
