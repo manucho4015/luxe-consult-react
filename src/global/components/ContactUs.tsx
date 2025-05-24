@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { toast } from 'react-toastify'
+import emailjs from '@emailjs/browser'
 
 // api
-import { createInquiry } from '../../api/inquiries'
+// import { createInquiry } from '../../api/inquiries'
 
 // custom types
 import type { Inquiry } from '../../custom-types/inquiries'
@@ -18,8 +19,19 @@ const ContactUs = () => {
 
     const sendInquiry = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        toast.promise(createInquiry(inquiry), {
-            pending: `Sending inquiry...`,
+        toast.promise(emailjs.send(
+            'service_m9hapxb',
+            'template_kwla54w',
+            {
+                subject: inquiry.title,
+                to_name: 'Luxe Consult',
+                from_email: inquiry.email,
+                to_email: 'Gb@luxe-consult.com',
+                message: inquiry.message,
+            },
+            'kPqHbsCejWz3Zg4A8'
+        ), {
+            pending: 'Sending inquiry...',
             success: {
                 render() {
                     setInquiry({
@@ -28,12 +40,13 @@ const ContactUs = () => {
                         email: '',
                         message: ''
                     })
-                    return 'Inquiry sent'
+                    return "Thank you! We'll get back as soon as we can 😄"
                 }
             },
             error: {
                 render({ data }) {
-                    return `${data}`
+                    console.error(data)
+                    return 'Something went wrong.'
                 }
             }
         })
