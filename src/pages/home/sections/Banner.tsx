@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 
 // api
 import { fetchPropertyTypes } from '../../../api/property-types'
+import { fetchPropertyStatuses } from '../../../api/property-statuses'
 
 // data
 import { bedrooms } from '../../../data/home'
@@ -15,22 +16,29 @@ const Banner = () => {
 
     const [searchLocation, setSearchLocation] = useState('')
     const [isActive, setIsActive] = useState('buy')
-    const [propertyType, setPropertyType] = useState('')
-    const [showPropertyDropdown, setShowPropertyDropdown] = useState(false)
+    const [displayStatus, setDisplayStatus] = useState('')
+    const [displayType, setDisplayType] = useState('')
+    const [showPropertyStatuses, setShowPropertyStatuses] = useState(false)
+    const [propertyStatuses, setPropertyStatuses] = useState<string[]>([])
+    const [showPropertyTypes, setShowPropertyTypes] = useState(false)
     const [propertyTypes, setPropertyTypes] = useState<string[]>([])
     const [bedroomState, setBedroomState] = useState('1 bedroom')
     const [showBedroomsDropdown, setShowBedroomsDropdown] = useState(false)
     const [budget, setBudget] = useState('Max ')
 
     const handleSearch = () => {
-        const searchUrl = `/property-search?status=${isActive}&location=${searchLocation}&type=${propertyType}&bedrooms=${bedroomState.split(' ')[0]}`
+        const searchUrl = `/property-search?status=${displayStatus}&location=${searchLocation}&type=${displayType}&bedrooms=${bedroomState.split(' ')[0]}`
         navigate(searchUrl)
     }
 
     useEffect(() => {
+        fetchPropertyStatuses().then((response) => {
+            const trimmedResponse = response.map((status) => status.name)
+            setPropertyStatuses(trimmedResponse)
+        })
+
         fetchPropertyTypes().then((response) => {
             const trimmedResponse = response.map((property) => property.name)
-            setPropertyType(trimmedResponse[0])
             setPropertyTypes(trimmedResponse)
         })
     }, [])
@@ -68,18 +76,42 @@ const Banner = () => {
                     {/* property type */}
                     <div className="h-[50px] min-w-[150px] md:min-w-[49px] w-[15%] mb-[25px] md:mb-0 flex flex-col justify-between">
                         <p className='text-[16px] font-medium capitalize'>property type</p>
-                        <div onClick={() => setShowPropertyDropdown(!showPropertyDropdown)} className=" h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[10px] text-sm text-[#797E82] flex items-center justify-between cursor-default relative">
-                            <p className='capitalize'>{propertyType}</p>
-                            <motion.img animate={{ rotate: showPropertyDropdown ? 180 : 0 }} src="/chevron-down-black.svg" alt="chevron down" className='w-[8px] h-[5px]' />
+                        <div onClick={() => setShowPropertyTypes(!showPropertyTypes)} className=" h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[10px] text-sm text-[#797E82] flex items-center justify-between cursor-default relative">
+                            <p className='capitalize'>{displayType}</p>
+                            <motion.img animate={{ rotate: showPropertyTypes ? 180 : 0 }} src="/chevron-down-black.svg" alt="chevron down" className='w-[8px] h-[5px]' />
 
                             {/* dropdown */}
                             {
-                                showPropertyDropdown && (
+                                showPropertyTypes && (
                                     <div className="w-[125px] md:w-[10vw] rounded-lg overflow-hidden bg-white shadow absolute top-[30px] left-[15px]">
                                         <ul>
                                             {
                                                 propertyTypes.map((type, index) => (
-                                                    <li key={index} className={`hover:bg-slate-200 ease-in-out duration-100 capitalize h-fit py-[10px] px-[5px] `} onClick={() => setPropertyType(type)}>{type}</li>
+                                                    <li key={index} className={`hover:bg-slate-200 ease-in-out duration-100 capitalize h-fit py-[10px] px-[5px] `} onClick={() => setDisplayType(type)}>{type}</li>
+                                                ))
+                                            }
+                                        </ul>
+                                    </div>
+                                )
+                            }
+
+                        </div>
+                    </div>
+                    {/* property status */}
+                    <div className="h-[50px] min-w-[150px] md:min-w-[49px] w-[15%] mb-[25px] md:mb-0 flex flex-col justify-between">
+                        <p className='text-[16px] font-medium capitalize'>property status</p>
+                        <div onClick={() => setShowPropertyStatuses(!showPropertyStatuses)} className=" h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[10px] text-sm text-[#797E82] flex items-center justify-between cursor-default relative">
+                            <p className='capitalize'>{displayStatus}</p>
+                            <motion.img animate={{ rotate: showPropertyStatuses ? 180 : 0 }} src="/chevron-down-black.svg" alt="chevron down" className='w-[8px] h-[5px]' />
+
+                            {/* dropdown */}
+                            {
+                                showPropertyStatuses && (
+                                    <div className="w-[125px] md:w-[10vw] rounded-lg overflow-hidden bg-white shadow absolute top-[30px] left-[15px]">
+                                        <ul>
+                                            {
+                                                propertyStatuses.map((status, index) => (
+                                                    <li key={index} className={`hover:bg-slate-200 ease-in-out duration-100 capitalize h-fit py-[10px] px-[5px] `} onClick={() => setDisplayStatus(status)}>{status}</li>
                                                 ))
                                             }
                                         </ul>
