@@ -23,7 +23,7 @@ const Property = ({ property }: { property: Property }) => {
                     <div className="flex">
                         <div
                             className={`h-[33px] w-[92px] cursor-default text-white bg-black text-[13px] flex items-center justify-center  rounded-[40px] uppercase mr-[15px]`}>
-                            {property.status_display}
+                            {property.status[0]}
                         </div>
                         {/* <div
                             className={`h-[33px] w-[92px] cursor-default text-white bg-primary text-[13px] flex items-center justify-center  rounded-[40px] uppercase`}>
