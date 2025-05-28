@@ -50,7 +50,12 @@ const Description = ({ property }: { property: Property | null }) => {
                 </ul> */}
 
                 {/* amenities */}
+                {
+                    property?.amenities.length && property?.amenities.length > 0 && (
                 <h5 className='capitalize font-medium text-[25px] mt-[50px]'>world-class amenities</h5>
+                    )
+                }
+
                 <ul className="list-disc inline-block  mt-[10px] bg-[#E7C87311] rounded-lg pt-[10px]">
                     {
                         property?.amenities.map((amenity, index) => (
