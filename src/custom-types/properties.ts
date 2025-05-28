@@ -1,10 +1,10 @@
-export type PropertyImage = {
+export interface PropertyImage {
     id: number,
     property: string,
     image: string
 }
 
-export type Property = {
+export interface Property {
     id: string,
     title: string,
     description: string,
@@ -14,7 +14,7 @@ export type Property = {
     bedrooms: number,
     bathrooms: number,
     sqft: number,
-    status_display: string,
+    status: string[],
     category: string,
     agent: string,
     listed_date: string,
