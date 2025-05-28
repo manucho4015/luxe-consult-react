@@ -15,7 +15,6 @@ const Banner = () => {
     const navigate = useNavigate()
 
     const [searchLocation, setSearchLocation] = useState('')
-    const [isActive, setIsActive] = useState('buy')
     const [displayStatus, setDisplayStatus] = useState('')
     const [displayType, setDisplayType] = useState('')
     const [showPropertyStatuses, setShowPropertyStatuses] = useState(false)
@@ -51,19 +50,6 @@ const Banner = () => {
             </div>
 
             <div className="absolute bottom-0 md:bottom-10 flex flex-col w-full items-center">
-                {/* Type search toggle */}
-                <div className="w-[236px] h-[73px] bg-white shadow flex items-center justify-center rounded-[40px] ">
-                    <motion.div initial={{ backgroundColor: '#E5AC74' }} animate={{ backgroundColor: isActive == 'buy' ? '#E5AC74' : '#fff' }}
-                        className={`h-[53px] w-[98px] text-[18px] cursor-default flex items-center justify-center rounded-[40px]`}
-                        onClick={() => setIsActive('buy')}>
-                        Buy
-                    </motion.div>
-                    <motion.div initial={{ backgroundColor: '#fff' }} animate={{ backgroundColor: isActive == 'rent' ? '#E5AC74' : '#fff' }}
-                        className={`h-[53px] w-[98px] cursor-default text-[18px] flex items-center justify-center  rounded-[40px]`}
-                        onClick={() => setIsActive('rent')}>
-                        Rent
-                    </motion.div>
-                </div>
                 {/* filter */}
                 <div className="w-full md:w-[90%] lg:w-[60%] min-w-[236px] h-fit min-h-[80px] pr-[20px] pl-[40px] py-[10px] bg-white shadow flex flex-wrap items-center justify-between md:rounded-[100px] mt-[15px]">
 
