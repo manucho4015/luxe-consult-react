@@ -63,7 +63,7 @@ const Banner = () => {
                     <div className="h-[50px] min-w-[150px] md:min-w-[49px] w-[15%] mb-[25px] md:mb-0 flex flex-col justify-between">
                         <p className='text-[16px] font-medium capitalize'>property type</p>
                         <div onClick={() => setShowPropertyTypes(!showPropertyTypes)} className=" h-[38px] w-[90%] bg-transparent border-b-[1.65px] border-slate-300 px-[10px] text-sm text-[#797E82] flex items-center justify-between cursor-default relative">
-                            <p className='capitalize'>{displayType}</p>
+                            <p className='capitalize'>{displayType.length > 11 ? `${displayType.slice(0, 11)}...` : displayType}</p>
                             <motion.img animate={{ rotate: showPropertyTypes ? 180 : 0 }} src="/chevron-down-black.svg" alt="chevron down" className='w-[8px] h-[5px]' />
 
                             {/* dropdown */}
