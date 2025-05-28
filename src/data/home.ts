@@ -39,7 +39,7 @@ export const selectToggles = [
 
 export const propertyTypes = ['apartment', 'furnished', 'unfurnished', 'godown', 'commercial', 'offices', 'duplexes']
 
-export const bedrooms = ['bedsitter', '1 bedroom', '2 bedrooms', '3 bedrooms', '4 bedrooms']
+export const bedrooms = ['studio', '1 bedroom', '2 bedrooms', '3 bedrooms', '4 bedrooms']
 export const bathrooms = ['1 bathroom', '2 bathrooms', '3 bathrooms', '4 bathrooms']
 
 export const companies = [
