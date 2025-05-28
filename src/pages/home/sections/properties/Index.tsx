@@ -45,7 +45,7 @@ const Properties = () => {
             <p className=" text-[17px] text-center">Partner With Us for Seamless Real Estate Success</p>
             <div className="inline-flex mt-[25px] justify-center w-full">
                 {/* select toggle */}
-                <div className="flex flex-wrap gap-1  w-[90vw]">
+                <div className="flex flex-wrap gap-2  w-[90vw]">
                     {
                         propertyTypes.map((type, index) => (
                             <motion.div key={index} animate={{ backgroundColor: isActive == type.name ? '#000' : '#E9E9E9', color: isActive == type.name ? '#fff' : '#000' }}
