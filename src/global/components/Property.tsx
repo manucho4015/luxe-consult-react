@@ -21,8 +21,8 @@ const Property = ({ property }: { property: Property }) => {
             <Link to={`/property/${property.id}`} className="relative inline-block rounded-2xl max-h-[296.27px] w-full h-[55vh]">
                 <div className="flex absolute top-[10px] left-[10px]">
                     <div
-                        className={`h-[33px] w-[92px] cursor-default text-white bg-black text-[13px] flex items-center justify-center  rounded-[40px] uppercase mr-[15px]`}>
-                        {property.status_display}
+                        className={`h-[33px] px-[10px] cursor-default text-white bg-black text-[13px] flex items-center justify-center  rounded-[40px] uppercase mr-[15px]`}>
+                        {property.status[0]}
                     </div>
                 </div>
                 <img src={property.images[0] ? property.images[0].image : './property-img-1.jpg'} className={`rounded-2xl h-full w-full `} />

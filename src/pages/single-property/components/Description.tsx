@@ -19,7 +19,7 @@ const Description = ({ property }: { property: Property | null }) => {
         <div className='mt-[50px] inline-flex w-full justify-center'>
             <div className="rounded-lg shadow-md p-[30px] w-[90vw]">
                 {/* <h5 className='capitalize font-medium text-[25px]'>property description</h5> */}
-                <h4 className='uppercase text-primary font-medium text-[30px] mt-[5px]'>{property?.title} <sup className=" text-black text-[12px] -top-[15px] font-light">{property?.status_display}</sup></h4>
+                <h4 className='uppercase text-primary font-medium text-[30px] mt-[5px]'>{property?.title} <sup className=" text-black text-[12px] -top-[15px] font-light uppercase">{property?.status[0]}</sup></h4>
                 <p className='mt-[25px] text-[#6D6D6D] whitespace-pre-line'>{property?.description}</p>
 
                 {/* pricing */}
