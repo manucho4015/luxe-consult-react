@@ -26,10 +26,10 @@ const Description = ({ property }: { property: Property | null }) => {
                 <h5 className='capitalize font-medium text-[25px] mt-[50px]'>More Information</h5>
                 <div className="flex flex-wrap mt-[10px]">
                     <div className="mr-[10px] col-span-1 font-light">
-                        Property type - <span className="font-medium capitalize">{property?.property_type}</span>
+                        Property type - <span className="font-medium capitalize">{property?.property_type.name}</span>
                     </div>
                     <div className="mr-[10px] col-span-1 font-light border-l-[1px] border-slate-700 pl-[10px]">
-                        Location - <span className="font-medium capitalize">{property?.location}</span>
+                        Location - <span className="font-medium capitalize">{`${property?.location.county}, ${property?.location.city}, ${property?.location.street_address}`}</span>
                     </div>
                     <div className="mr-[10px] col-span-1 font-light border-l-[1px] border-slate-700 pl-[10px]">
                         Price - <span className="font-medium capitalize">Ksh. {property && commafy(parseInt(property.price))}</span>

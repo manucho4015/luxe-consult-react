@@ -33,14 +33,14 @@ const Property = ({ property }: { property: Property }) => {
                 </div>
             </Link>
             <div className="inline-flex mt-[45px] justify-between items-center w-full">
-                <p className="text-[19px] capitalize">{property.property_type}</p>
+                <p className="text-[19px] capitalize">{property.property_type.name}</p>
                 <p className="text-[21px] font-medium text-primary">Ksh. {commafy(parseInt(property.price))}</p>
             </div>
 
             {/* location */}
             <div className="inline-flex mt-[10px] items-center w-full">
                 <img src="/location.svg" alt="location" className="max-w-[17.33px] max-h-[20px] h-[5vh] w-[10vh] mr-[15px]" />
-                <p className="text-[16px]">{property.location}</p>
+                <p className="text-[16px]">{`${property?.location.county}, ${property?.location.city}, ${property?.location.street_address}`}</p>
             </div>
 
             {/* features */}

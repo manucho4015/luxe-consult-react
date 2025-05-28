@@ -33,8 +33,8 @@ const Index = () => {
         console.log(statusParam)
         fetchProperties().then((response) => {
             const filterArray = response.filter((property) =>
-                (locationParam ? property.location.toUpperCase().includes(locationParam?.toUpperCase()) : property) &&
-                (typeParam ? property.property_type === typeParam : property) &&
+                (locationParam ? `${property?.location.county}, ${property?.location.city}, ${property?.location.street_address}`.toUpperCase().includes(locationParam?.toUpperCase()) : property) &&
+                (typeParam ? property.property_type.name === typeParam : property) &&
                 (bedroomsParam ? property.bedrooms === parseInt(bedroomsParam) : property) &&
                 (statusParam ? property.status[0].toUpperCase() === statusParam : property) &&
                 (maxPriceParam ? parseFloat(property.price) <= parseFloat(maxPriceParam) : property)

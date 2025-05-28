@@ -1,3 +1,5 @@
+import type { PropertyLocation } from "./property-location"
+import type { PropertyType } from "./property-types"
 export interface PropertyImage {
     id: number,
     property: string,
@@ -8,8 +10,8 @@ export interface Property {
     id: string,
     title: string,
     description: string,
-    location: string,
-    property_type: string,
+    location: PropertyLocation,
+    property_type: PropertyType,
     price: string,
     bedrooms: number,
     bathrooms: number,
