@@ -36,7 +36,7 @@ const Index = () => {
                 (locationParam ? property.location.toUpperCase().includes(locationParam?.toUpperCase()) : property) &&
                 (typeParam ? property.property_type === typeParam : property) &&
                 (bedroomsParam ? property.bedrooms === parseInt(bedroomsParam) : property) &&
-                (statusParam ? property.status_display.toUpperCase() === statusParam : property) &&
+                (statusParam ? property.status[0].toUpperCase() === statusParam : property) &&
                 (maxPriceParam ? parseFloat(property.price) <= parseFloat(maxPriceParam) : property)
             )
             setProperties(filterArray)
