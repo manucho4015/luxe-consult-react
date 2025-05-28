@@ -21,12 +21,12 @@ const Banner = () => {
     const [propertyStatuses, setPropertyStatuses] = useState<string[]>([])
     const [showPropertyTypes, setShowPropertyTypes] = useState(false)
     const [propertyTypes, setPropertyTypes] = useState<string[]>([])
-    const [bedroomState, setBedroomState] = useState('1 bedroom')
+    const [bedroomState, setBedroomState] = useState('')
     const [showBedroomsDropdown, setShowBedroomsDropdown] = useState(false)
     const [budget, setBudget] = useState('Max ')
 
     const handleSearch = () => {
-        const searchUrl = `/property-search?status=${displayStatus}&location=${searchLocation}&type=${displayType}&bedrooms=${bedroomState.split(' ')[0]}`
+        const searchUrl = `/property-search?${displayStatus && `status=${displayStatus}`}${searchLocation && `&location=${searchLocation}`}${displayType && `&type=${displayType}`}${bedroomState && `&bedrooms=${bedroomState.split(' ')[0]}`}`
         navigate(searchUrl)
     }
 
