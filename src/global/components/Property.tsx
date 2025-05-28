@@ -25,7 +25,7 @@ const Property = ({ property }: { property: Property }) => {
                         {property.status_display}
                     </div>
                 </div>
-                <img src={property.images[0].image} className={`rounded-2xl h-full w-full `} />
+                <img src={property.images[0] ? property.images[0].image : './property-img-1.jpg'} className={`rounded-2xl h-full w-full `} />
             </Link>
             <div className="inline-flex mt-[45px] justify-between items-center w-full">
                 <p className="text-[19px] capitalize">{property.title.length > 25 ? `${property.title.slice(0, 25)}...` : property.title}</p>
