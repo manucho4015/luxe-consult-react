@@ -20,7 +20,7 @@ const Description = ({ property }: { property: Property | null }) => {
             <div className="rounded-lg shadow-md p-[30px] w-[90vw]">
                 {/* <h5 className='capitalize font-medium text-[25px]'>property description</h5> */}
                 <h4 className='uppercase text-primary font-medium text-[30px] mt-[5px]'>{property?.title} <sup className=" text-black text-[12px] -top-[15px] font-light">{property?.status_display}</sup></h4>
-                <p className='mt-[25px] text-[#6D6D6D]'>{property?.description}</p>
+                <p className='mt-[25px] text-[#6D6D6D] whitespace-pre-line'>{property?.description}</p>
 
                 {/* pricing */}
                 <h5 className='capitalize font-medium text-[25px] mt-[50px]'>More Information</h5>
@@ -52,7 +52,7 @@ const Description = ({ property }: { property: Property | null }) => {
                 {/* amenities */}
                 {
                     property?.amenities.length && property?.amenities.length > 0 && (
-                <h5 className='capitalize font-medium text-[25px] mt-[50px]'>world-class amenities</h5>
+                        <h5 className='capitalize font-medium text-[25px] mt-[50px]'>world-class amenities</h5>
                     )
                 }
 
