@@ -17,6 +17,7 @@ export const fetchProperties = async () => {
         throw new Error(axios_error_message(error));
     }
 }
+
 export const fetchProperty = async (id: string) => {
     try {
         const response = await http_client().get(`api/properties/${id}/`);

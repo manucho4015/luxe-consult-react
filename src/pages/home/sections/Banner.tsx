@@ -1,18 +1,23 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router'
 
 import { motion } from "framer-motion"
 
+// api
+import { fetchPropertyTypes } from '../../../api/property-types'
+
 // data
-import { propertyTypes, bedrooms } from '../../../data/home'
+import { bedrooms } from '../../../data/home'
+
 
 const Banner = () => {
     const navigate = useNavigate()
 
     const [searchLocation, setSearchLocation] = useState('')
     const [isActive, setIsActive] = useState('buy')
-    const [propertyType, setPropertyType] = useState('apartment')
+    const [propertyType, setPropertyType] = useState('')
     const [showPropertyDropdown, setShowPropertyDropdown] = useState(false)
+    const [propertyTypes, setPropertyTypes] = useState<string[]>([])
     const [bedroomState, setBedroomState] = useState('1 bedroom')
     const [showBedroomsDropdown, setShowBedroomsDropdown] = useState(false)
     const [budget, setBudget] = useState('Max ')
@@ -21,6 +26,15 @@ const Banner = () => {
         const searchUrl = `/property-search?status=${isActive}&location=${searchLocation}&type=${propertyType}&bedrooms=${bedroomState.split(' ')[0]}`
         navigate(searchUrl)
     }
+
+    useEffect(() => {
+        fetchPropertyTypes().then((response) => {
+            const trimmedResponse = response.map((property) => property.name)
+            setPropertyType(trimmedResponse[0])
+            setPropertyTypes(trimmedResponse)
+        })
+    }, [])
+
     return (
         <div className="min-h-[100vh] bg-[url(/beautiful-architecture-building.jpg)] bg-cover bg-center bg-blend-color bg-[#00000070] relative flex items-center justify-center">
             <div className="w-[75%] md:block md:absolute bottom-[250px]">
@@ -61,11 +75,11 @@ const Banner = () => {
                             {/* dropdown */}
                             {
                                 showPropertyDropdown && (
-                                    <div className="w-[125px] md:w-[10vw] rounded-lg bg-white shadow absolute top-[30px] left-[15px]">
+                                    <div className="w-[125px] md:w-[10vw] rounded-lg overflow-hidden bg-white shadow absolute top-[30px] left-[15px]">
                                         <ul>
                                             {
                                                 propertyTypes.map((type, index) => (
-                                                    <li key={index} className={`hover:bg-slate-200 ease-in-out duration-100 capitalize h-[25px] px-[5px] ${index === 0 && 'rounded-t-lg'} ${index === propertyTypes.length - 1 && 'rounded-b-lg'}`} onClick={() => setPropertyType(type)}>{type}</li>
+                                                    <li key={index} className={`hover:bg-slate-200 ease-in-out duration-100 capitalize h-fit py-[10px] px-[5px] `} onClick={() => setPropertyType(type)}>{type}</li>
                                                 ))
                                             }
                                         </ul>
