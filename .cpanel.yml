@@ -4,4 +4,4 @@ deployment:
     - export DEPLOYMENT_TARGET=/home/cogiwggd/public_html
     - export DEPLOYMENT_SOURCE=/home/cogiwggd/repositories/luxe-consult-react
     - rm -rf $DEPLOYMENT_TARGET/*
-    - cp -r dist/* $DEPLOYMENT_TARGET/
+    - cp -r .htaccess dist/* $DEPLOYMENT_TARGET/
