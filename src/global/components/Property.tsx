@@ -35,7 +35,7 @@ const Property = ({ property }: { property: Property }) => {
             {/* location */}
             <div className="inline-flex mt-[10px] items-center w-full">
                 <img src="/location.svg" alt="location" className="max-w-[17.33px] max-h-[20px] h-[5vh] w-[10vh] mr-[15px]" />
-                <p className="text-[16px]">{`${property?.location.city}, ${property?.location.county}, ${property?.location.street_address}`}</p>
+                <p className="text-[16px]">{`${property?.location.street_address}, ${property?.location.city}, ${property?.location.county}.`}</p>
             </div>
 
             {/* features */}
