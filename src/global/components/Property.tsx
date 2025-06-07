@@ -55,7 +55,7 @@ const Property = ({ property }: { property: Property }) => {
             </div>
             <div className="inline-flex justify-between mt-[15px] h-[60px] items-center w-full">
                 {/* whatsapp link */}
-                <a href="http://wa.me/message/HRKPX6SM6FPPK1" target="_blank" rel="noopener noreferrer" className="flex w-fit h-full items-center justify-center border-[1px] border-[#1F4B43] rounded-2xl px-[15px]">
+                <a href={property.whatsapp_link ? property.whatsapp_link : "http://wa.me/message/HRKPX6SM6FPPK1"} target="_blank" rel="noopener noreferrer" className="flex w-fit h-full items-center justify-center border-[1px] border-[#1F4B43] rounded-2xl px-[15px]">
                     <img src="/iconoir--whatsapp.svg" alt="call" className=" mr-[10px]" />
                     <p className="capitalize text-[15px] text-[#1F4B43]">whatsapp</p>
 

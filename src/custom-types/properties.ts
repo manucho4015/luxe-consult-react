@@ -22,4 +22,5 @@ export interface Property {
     listed_date: string,
     amenities: string[],
     images: PropertyImage[]
+    whatsapp_link: string
 }
