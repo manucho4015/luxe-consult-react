@@ -15,7 +15,7 @@ const Categories = ({ properties }: { properties: Property[] }) => {
         { city, count }
     ))
 
-    popularPlaces = popularPlaces.sort((a, b) => b.count - a.count)
+    popularPlaces = popularPlaces.sort((a, b) => b.count - a.count).slice(0, 5)
 
     return (
         <div className='min-h-[50vh] inline-block w-full'>
