@@ -5,18 +5,16 @@ import { motion } from 'framer-motion'
 import PropertyCard from './components/Property'
 
 // api
-import { fetchProperties } from '../../../../api/properties'
 import { fetchPropertyTypes } from '../../../../api/property-types'
 
 // custom types
 import type { Property } from '../../../../custom-types/properties'
 import type { PropertyType } from '../../../../custom-types/property-types'
 
-const Properties = () => {
+const Properties = ({ properties, filterProperties, setFilterProperties }: { properties: Property[], filterProperties: Property[], setFilterProperties: React.Dispatch<React.SetStateAction<Property[]>> }) => {
     const [isActive, setIsActive] = useState('')
+
     const [propertyTypes, setPropertyTypes] = useState<PropertyType[]>([])
-    const [properties, setProperties] = useState<Property[]>([])
-    const [filterProperties, setFilterProperties] = useState<Property[]>([])
 
 
     const handleFilter = (type: string) => {
@@ -31,14 +29,11 @@ const Properties = () => {
     }
 
     useEffect(() => {
-        fetchProperties().then((response) => {
-            setProperties(response.filter((property) => property.category.toUpperCase() === 'FEATURED'))
-            setFilterProperties(response.filter((property) => property.category.toUpperCase() === 'FEATURED'))
-        })
         fetchPropertyTypes().then((response) => {
             setPropertyTypes(response)
         })
     }, [])
+
     return (
         <div className='min-h-[50vh] inline-block w-full'>
             <h2 className="font-bold text-[40px] mt-[100px] text-center">Featured Properties</h2>

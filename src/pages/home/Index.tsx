@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react"
 
 // sections
 import Banner from "./sections/Banner"
@@ -9,13 +10,32 @@ import Featured from "./sections/properties/Index"
 import ContactUs from "../../global/components/ContactUs"
 import Download from "../../global/components/Download"
 
+// api
+import { fetchProperties } from "../../api/properties"
+
+// custom types
+import type { Property } from "../../custom-types/properties"
+
 function App() {
+
+  const [properties, setProperties] = useState<Property[]>([])
+  const [featuredproperties, setFeaturedProperties] = useState<Property[]>([])
+  const [filterProperties, setFilterProperties] = useState<Property[]>([])
+
+  useEffect(() => {
+    fetchProperties().then((response) => {
+      setProperties(response)
+      setFeaturedProperties(response.filter((property) => property.category.toUpperCase() === 'FEATURED'))
+      setFilterProperties(response.filter((property) => property.category.toUpperCase() === 'FEATURED'))
+    })
+
+  }, [])
 
   return (
     <>
       <Banner />
-      <Featured />
-      <Popular />
+      <Featured properties={featuredproperties} filterProperties={filterProperties} setFilterProperties={setFilterProperties} />
+      <Popular properties={properties} />
       <WorkWithUs />
       <Companies />
       {/* <Ongoing /> */}
